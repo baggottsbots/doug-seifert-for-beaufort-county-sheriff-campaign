@@ -1,53 +1,8 @@
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Doug Seifert",
-  "jobTitle": "Candidate for Beaufort County Sheriff",
-  "description": "20-year veteran of the Beaufort County Sheriff's Office running for Sheriff in 2026. Former Lieutenant of the Southern Enforcement Branch and first candidate to file.",
-  "image": "https://paymegpt.com/objects/quick-uploads/2/1b22b3719bafe8f8.png",
-  "url": "https://seifertforsheriff.com/",
-  "sameAs": ["https://www.facebook.com/share/1DiudA3YDX/"],
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Beaufort County",
-    "addressRegion": "SC",
-    "addressCountry": "US"
-  },
-  "affiliation": {
-    "@type": "Organization",
-    "name": "Committee to Elect Seifert Sheriff"
-  }
-}
+{"@context":"https://schema.org","@type":"Person","name":"Doug Seifert","jobTitle":"Candidate for Beaufort County Sheriff","description":"20-year veteran of the Beaufort County Sheriff's Office running for Sheriff in 2026. Former Lieutenant of the Southern Enforcement Branch and first candidate to file.","image":"https://paymegpt.com/objects/quick-uploads/2/1b22b3719bafe8f8.png","url":"https://seifertforsheriff.com/","sameAs":["https://www.facebook.com/share/1DiudA3YDX/"],"address":{"@type":"PostalAddress","addressLocality":"Beaufort County","addressRegion":"SC","addressCountry":"US"},"affiliation":{"@type":"Organization","name":"Committee to Elect Seifert Sheriff"}}
 
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Seifert for Sheriff",
-  "url": "https://seifertforsheriff.com/",
-  "description": "Official campaign website for Doug Seifert, candidate for Beaufort County Sheriff 2026.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Committee to Elect Seifert Sheriff",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Beaufort County",
-      "addressRegion": "SC",
-      "addressCountry": "US"
-    }
-  }
-}
+{"@context":"https://schema.org","@type":"WebSite","name":"Seifert for Sheriff","url":"https://seifertforsheriff.com/","description":"Official campaign website for Doug Seifert, candidate for Beaufort County Sheriff 2026.","publisher":{"@type":"Organization","name":"Committee to Elect Seifert Sheriff","address":{"@type":"PostalAddress","addressLocality":"Beaufort County","addressRegion":"SC","addressCountry":"US"}}}
 
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home",                "item": "https://seifertforsheriff.com/" },
-    { "@type": "ListItem", "position": 2, "name": "About Doug",          "item": "https://seifertforsheriff.com/#about" },
-    { "@type": "ListItem", "position": 3, "name": "Campaign Priorities", "item": "https://seifertforsheriff.com/#priorities" },
-    { "@type": "ListItem", "position": 4, "name": "Donate",              "item": "https://seifertforsheriff.com/#donate" },
-    { "@type": "ListItem", "position": 5, "name": "Connect",             "item": "https://seifertforsheriff.com/#connect" }
-  ]
-}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://seifertforsheriff.com/"},{"@type":"ListItem","position":2,"name":"About Doug","item":"https://seifertforsheriff.com/#about"},{"@type":"ListItem","position":3,"name":"Campaign Priorities","item":"https://seifertforsheriff.com/#priorities"},{"@type":"ListItem","position":4,"name":"Donate","item":"https://seifertforsheriff.com/#donate"},{"@type":"ListItem","position":5,"name":"Connect","item":"https://seifertforsheriff.com/#connect"}]}
 
 (function(){
   var params=new URLSearchParams(window.location.search);
@@ -225,16 +180,7 @@
   });
 })();
 
-// Scroll reveal
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('visible');
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-  // Form handlers
-  function handleSignup(btn) {
+function handleSignup(btn) {
     btn.textContent = '\u2713 You\u2019re In!';
     btn.style.background = 'var(--gold)';
     btn.style.color = 'var(--navy)';

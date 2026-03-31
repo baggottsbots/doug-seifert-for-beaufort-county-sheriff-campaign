@@ -474,9 +474,13 @@
   .social-handle { color: var(--gold); font-size: 0.82rem; font-weight: 600; }
   .social-card p { font-size: 0.78rem; color: var(--text-muted); text-align: center; line-height: 1.5; }
 
-  .signup-form-container {
-    max-width: 500px;
-    margin: 4rem auto 0;
+  .signup-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 4rem;
+    padding-top: 4rem;
+    border-top: 1px solid rgba(201,168,76,0.2);
   }
   .signup-form h3 {
     font-family: 'Playfair Display', serif;
@@ -547,6 +551,7 @@
     .hero-content { padding: 4rem 1.5rem 3rem; }
     .hero-photo-col { min-height: 65vw; }
     .about-grid,
+    .signup-row,
     .donate-layout { grid-template-columns: 1fr; gap: 3rem; }
     .stat-bar { gap: 2rem; }
     .donate-iframe-wrap iframe { height: 1150px; }

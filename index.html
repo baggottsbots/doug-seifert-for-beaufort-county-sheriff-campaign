@@ -1,20 +1,15 @@
-<!DOCTYPE html>
 
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- PRIMARY SEO -->
 
 
 <meta name="author" content="Doug Seifert for Sheriff Campaign">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<link rel="canonical" href="https://seifertforsheriff.com/">
-<meta name="geo.region" content="US-SC">
+<link rel="canonical" href="https://seifertforsheriff.com/"><!-- GEO / LOCAL SEO --><meta name="geo.region" content="US-SC">
 <meta name="geo.placename" content="Beaufort County, South Carolina">
 <meta name="geo.position" content="32.4316;-80.6698">
-<meta name="ICBM" content="32.4316, -80.6698">
-
+<meta name="ICBM" content="32.4316, -80.6698"><!-- OPEN GRAPH -->
 <meta property="og:url" content="https://seifertforsheriff.com/">
 
 
@@ -23,23 +18,66 @@
 <meta property="og:image:height" content="630">
 
 <meta property="og:site_name" content="Seifert for Sheriff">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="en_US"><!-- TWITTER / X CARD -->
 
 
 
-
-<meta name="twitter:image:alt" content="Doug Seifert - Candidate for Beaufort County Sheriff 2026">
-
-
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<meta name="twitter:image:alt" content="Doug Seifert - Candidate for Beaufort County Sheriff 2026"><!-- STRUCTURED DATA: Person --><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Doug Seifert",
+  "jobTitle": "Candidate for Beaufort County Sheriff",
+  "description": "20-year veteran of the Beaufort County Sheriff's Office running for Sheriff in 2026. Former Lieutenant of the Southern Enforcement Branch and first candidate to file.",
+  "image": "https://paymegpt.com/objects/quick-uploads/2/1b22b3719bafe8f8.png",
+  "url": "https://seifertforsheriff.com/",
+  "sameAs": ["https://www.facebook.com/share/1DiudA3YDX/"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Beaufort County",
+    "addressRegion": "SC",
+    "addressCountry": "US"
+  },
+  "affiliation": {
+    "@type": "Organization",
+    "name": "Committee to Elect Seifert Sheriff"
+  }
+}
+</script><!-- STRUCTURED DATA: WebSite --><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Seifert for Sheriff",
+  "url": "https://seifertforsheriff.com/",
+  "description": "Official campaign website for Doug Seifert, candidate for Beaufort County Sheriff 2026.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Committee to Elect Seifert Sheriff",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Beaufort County",
+      "addressRegion": "SC",
+      "addressCountry": "US"
+    }
+  }
+}
+</script><!-- STRUCTURED DATA: Breadcrumb --><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home",                "item": "https://seifertforsheriff.com/" },
+    { "@type": "ListItem", "position": 2, "name": "About Doug",          "item": "https://seifertforsheriff.com/#about" },
+    { "@type": "ListItem", "position": 3, "name": "Campaign Priorities", "item": "https://seifertforsheriff.com/#priorities" },
+    { "@type": "ListItem", "position": 4, "name": "Donate",              "item": "https://seifertforsheriff.com/#donate" },
+    { "@type": "ListItem", "position": 5, "name": "Connect",             "item": "https://seifertforsheriff.com/#connect" }
+  ]
+}
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://secure.anedot.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=Bebas+Neue&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-
-
 <!-- SEO Meta Tags -->
 <title>Elect Doug Seifert: Leadership for Beaufort County</title>
 <meta name="description" content="Join the movement to elect Doug Seifert for Sheriff. Experience the difference of dedicated community leadership and proven public safety expertise." />
@@ -58,13 +96,187 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://paymegpt.com/api/landing-pages/images/landing-page-images%2F0%2F1773931117036_blob.png" />
 <!-- End SEO Meta Tags -->
 
-
-  <link rel="stylesheet" href="styles.css">
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=2177');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='q3mMyV';
+  var apiBase='https://paymegpt.com';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">Thank you for purchasing '+pName.replace(/</g,'&lt;').replace(/>/g,'&gt;')+'.</p><button onclick="document.getElementById(\'payment-success-overlay\').remove();window.history.replaceState({},\'\',window.location.pathname);" style="padding:12px 32px;font-size:16px;font-weight:600;background:#16a34a;color:white;border:none;border-radius:8px;cursor:pointer;">Continue</button></div>';
+      document.body.appendChild(overlay);
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-<a href="#main-content" class="skip-link">Skip to main content</a>
-
-<nav aria-label="Main navigation">
+<body><a href="#main-content" class="skip-link">Skip to main content</a>
+<!-- NAV --><nav aria-label="Main navigation">
   <div class="nav-logo">Seifert for Sheriff</div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
@@ -72,11 +284,7 @@
     <li><a href="#donate">Donate</a></li>
     <li><a href="#connect">Connect</a></li>
   </ul>
-</nav>
-
-<main id="main-content">
-
-  <section class="hero" aria-label="Campaign introduction">
+</nav><main id="main-content"><!-- HERO --><section class="hero" aria-label="Campaign introduction">
     <div class="hero-bg"></div>
     <div class="hero-content">
       <div class="hero-badge">First to File &middot; Beaufort County 2026</div>
@@ -88,11 +296,16 @@
       </div>
     </div>
     <div class="hero-photo-col">
-      <img src="https://paymegpt.com/objects/quick-uploads/2/1b22b3719bafe8f8.png" alt="Doug Seifert, candidate for Beaufort County Sheriff 2026" width="800" height="1000" loading="eager" fetchpriority="high">
+      <img
+        src="https://paymegpt.com/objects/quick-uploads/2/1b22b3719bafe8f8.png"
+        alt="Doug Seifert, candidate for Beaufort County Sheriff 2026"
+        width="800"
+        height="1000"
+        loading="eager"
+        fetchpriority="high"
+      >
     </div>
-  </section>
-
-  <div class="stat-bar" role="region" aria-label="Campaign at a glance">
+  </section><!-- STAT BAR --><div class="stat-bar" role="region" aria-label="Campaign at a glance">
     <div class="stat-item">
       <div class="stat-num">20</div>
       <div class="stat-label">Years Serving Beaufort County</div>
@@ -109,12 +322,10 @@
       <div class="stat-num">2026</div>
       <div class="stat-label">Ready to Lead</div>
     </div>
-  </div>
-
-  <section class="about" id="about" aria-labelledby="about-heading">
+  </div><!-- ABOUT --><section class="about" id="about" aria-labelledby="about-heading">
     <div class="section-inner">
       <div class="about-grid">
-        <div class="about-text">
+        <div class="about-text fade-up">
           <div class="section-label">About Doug</div>
           <h2 class="section-title" id="about-heading">A Career Built on Service</h2>
           <div class="divider"></div>
@@ -123,7 +334,7 @@
           <p>Before Beaufort, Doug served as a <strong>Town Councilman in North Bend, Ohio</strong>, where he developed his foundation in civic leadership and public accountability. That experience, combined with two decades of boots-on-the-ground law enforcement, makes him uniquely prepared for the role.</p>
           <p>A proud <strong>Hilton Head Republican</strong> and Lowcountry community member, Doug is committed to building on Sheriff Tanner&rsquo;s legacy while bringing the fresh perspective this department deserves.</p>
         </div>
-        <div>
+        <div class="fade-up">
           <div class="section-label">Career Timeline</div>
           <div class="timeline">
             <div class="timeline-item">
@@ -150,83 +361,98 @@
         </div>
       </div>
     </div>
-  </section>
-
-  <section class="priorities" id="priorities" aria-labelledby="priorities-heading">
+  </section><!-- PRIORITIES --><section class="priorities" id="priorities" aria-labelledby="priorities-heading">
     <div class="section-inner">
-      <div class="section-label">Campaign Priorities</div>
-      <h2 class="section-title" id="priorities-heading">Doug&rsquo;s Plan for Beaufort County</h2>
-      <div class="divider"></div>
+      <div class="fade-up">
+        <div class="section-label">Campaign Priorities</div>
+        <h2 class="section-title" id="priorities-heading">Doug&rsquo;s Plan for Beaufort County</h2>
+        <div class="divider"></div>
+      </div>
       <div class="priority-grid">
-        <div class="priority-card">
+        <div class="priority-card fade-up">
           <div class="priority-icon"><i class="fa-solid fa-money-bill-trend-up" aria-hidden="true"></i></div>
           <h3>Competitive Deputy Pay</h3>
           <p>Beaufort County deserves the best deputies available. Doug will push for higher salaries to attract and retain qualified professionals &mdash; filling vacancies with talent, not compromise.</p>
         </div>
-        <div class="priority-card">
+        <div class="priority-card fade-up">
           <div class="priority-icon"><i class="fa-solid fa-person-shelter" aria-hidden="true"></i></div>
           <h3>Youth Violence Prevention</h3>
           <p>Reactive policing isn&rsquo;t enough. Doug will implement proactive community-based programs to address the root causes of youth violence before they escalate into crises.</p>
         </div>
-        <div class="priority-card">
+        <div class="priority-card fade-up">
           <div class="priority-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
           <h3>Traffic &amp; Drug Enforcement</h3>
           <p>Our roads and communities deserve focused attention. Doug will strengthen both traffic enforcement and drug interdiction to make Beaufort County safer for every resident and visitor.</p>
         </div>
-        <div class="priority-card">
+        <div class="priority-card fade-up">
           <div class="priority-icon"><i class="fa-solid fa-star" aria-hidden="true"></i></div>
           <h3>Fresh Leadership</h3>
           <p>Sheriff Tanner built a well-oiled machine. Doug&rsquo;s goal is to honor that legacy while bringing new energy and ideas &mdash; because standing still is never an option in public safety.</p>
         </div>
       </div>
     </div>
-  </section>
-
-  <div class="quote-section" role="region" aria-label="Candidate quote">
-    <div class="quote-inner">
+  </section><!-- QUOTE --><div class="quote-section" role="region" aria-label="Candidate quote">
+    <div class="quote-inner fade-up">
       <blockquote>When you&rsquo;re all focusing on the mission &mdash; that&rsquo;s all that matters.</blockquote>
       <cite>&mdash; Doug Seifert, Candidate for Beaufort County Sheriff</cite>
     </div>
-  </div>
-
-  <section class="donate" id="donate" aria-labelledby="donate-heading">
+  </div><!-- DONATE --><section class="donate" id="donate" aria-labelledby="donate-heading">
     <div class="section-inner">
       <div class="donate-layout">
-        <div class="donate-intro">
+        <div class="donate-intro fade-up">
           <div class="section-label">Support the Campaign</div>
           <h2 class="section-title" id="donate-heading">Make a Donation</h2>
           <div class="divider"></div>
           <p>Your contribution helps Doug take his message to every corner of Beaufort County. Every dollar invested in this campaign is a dollar invested in <strong>safer communities, accountable leadership, and a Sheriff&rsquo;s Office that works for you.</strong></p>
           <p>Donations are processed securely through Anedot. If you prefer to give via a direct link, use the button below.</p>
-          <a href="https://secure.anedot.com/seifert-for-seifert/seifertforseriff" target="_blank" rel="noopener noreferrer" class="donate-link-btn">
+          <a
+            href="https://secure.anedot.com/seifert-for-seifert/seifertforseriff"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="donate-link-btn"
+          >
             <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Donate via Direct Link
           </a>
         </div>
-        <div class="donate-iframe-wrap">
+        <div class="donate-iframe-wrap fade-up">
           <div class="donate-iframe-label">
             <i class="fa-solid fa-lock" aria-hidden="true"></i>
             <span>Secure Donation Form &mdash; Powered by Anedot</span>
           </div>
-          <iframe src="https://secure.anedot.com/seifert-for-seifert/24c59e80-2cfd-4847-8447-e76eae258994?embed=true" width="100%" height="1380" frameborder="0" title="Donate to the Seifert for Sheriff Campaign" loading="lazy" scrolling="no"></iframe>
+          <iframe
+            src="https://secure.anedot.com/seifert-for-seifert/24c59e80-2cfd-4847-8447-e76eae258994?embed=true"
+            width="100%"
+            height="1380"
+            frameborder="0"
+            title="Donate to the Seifert for Sheriff Campaign"
+            loading="lazy"
+            scrolling="no"
+          ></iframe>
         </div>
       </div>
     </div>
-  </section>
-
-  <section class="connect" id="connect" aria-labelledby="connect-heading">
+  </section><!-- CONNECT --><section class="connect" id="connect" aria-labelledby="connect-heading">
     <div class="section-inner">
-      <div class="section-label">Stay Connected</div>
-      <h2 class="section-title" id="connect-heading">Follow the Campaign</h2>
-      <div class="divider"></div>
-      <div class="social-grid">
-        <a href="https://www.facebook.com/share/1DiudA3YDX/" target="_blank" rel="noopener noreferrer" class="social-card" aria-label="Follow Doug Seifert for Sheriff on Facebook">
+      <div class="fade-up">
+        <div class="section-label">Stay Connected</div>
+        <h2 class="section-title" id="connect-heading">Follow the Campaign</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="social-grid fade-up">
+        <a
+          href="https://www.facebook.com/share/1DiudA3YDX/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-card"
+          aria-label="Follow Doug Seifert for Sheriff on Facebook"
+        >
           <div class="social-icon"><i class="fa-brands fa-facebook" aria-hidden="true"></i></div>
           <h3>Facebook</h3>
           <div class="social-handle">@DougSeifertForSheriff</div>
           <p>Campaign updates, events, and community conversations</p>
         </a>
       </div>
-      <div class="signup-row">
+      <div class="signup-row fade-up">
         <div class="signup-form">
           <h3>Get Campaign Updates</h3>
           <div class="form-row">
@@ -256,19 +482,11 @@
         </div>
       </div>
     </div>
-  </section>
-
-</main>
-
-<footer role="contentinfo">
+  </section></main><!-- FOOTER --><footer role="contentinfo">
   <p>
     <em>PAID BY THE COMMITTEE TO ELECT SEIFERT SHERIFF</em><br><br>
     &copy; 2026 All rights reserved.
   </p>
-</footer>
-
-
-
-  <script src="script.js"></script>
+</footer>  <script src="script.js"></script>
 </body>
 </html>

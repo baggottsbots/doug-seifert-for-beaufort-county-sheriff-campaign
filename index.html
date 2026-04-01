@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -14,6 +13,12 @@
 <meta name="author" content="Doug Seifert for Sheriff Campaign">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <link rel="canonical" href="https://seifertforsheriff.com/">
+
+<!-- PERFORMANCE & ACCESSIBILITY -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="theme-color" content="#0a1628">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 <!-- GEO / LOCAL SEO -->
 
@@ -43,7 +48,7 @@
 
 <meta name="twitter:image:alt" content="Doug Seifert - Candidate for Beaufort County Sheriff 2026">
 
-<!-- STRUCTURED DATA: Person -->
+<!-- STRUCTURED DATA: Person Schema for Doug Seifert -->
 
 <script type="application/ld+json">
 {
@@ -57,13 +62,43 @@
   "sameAs": ["https://www.facebook.com/share/1DiudA3YDX/"],
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Beaufort County",
+    "addressLocality": "Beaufort",
     "addressRegion": "SC",
+    "postalCode": "29902",
     "addressCountry": "US"
   },
   "affiliation": {
     "@type": "Organization",
     "name": "Committee to Elect Seifert Sheriff"
+  },
+  "knowsAbout": ["Law Enforcement", "Public Safety", "Community Leadership", "Police Administration"],
+  "workLocation": {
+    "@type": "Place",
+    "name": "Beaufort County, South Carolina"
+  }
+}
+</script>
+
+<!-- STRUCTURED DATA: Election Schema -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Election",
+  "name": "Beaufort County Sheriff Election 2026",
+  "electionDate": "2026-11-03",
+  "location": {
+    "@type": "AdministrativeArea",
+    "name": "Beaufort County",
+    "containedInPlace": {
+      "@type": "State",
+      "name": "South Carolina"
+    }
+  },
+  "candidate": {
+    "@type": "Person",
+    "name": "Doug Seifert",
+    "url": "https://seifertforsheriff.com/"
   }
 }
 </script>
@@ -77,12 +112,16 @@
   "name": "Seifert for Sheriff",
   "url": "https://seifertforsheriff.com/",
   "description": "Official campaign website for Doug Seifert, candidate for Beaufort County Sheriff 2026.",
+  "potentialAction": {
+    "@type": "DonateAction",
+    "target": "https://secure.anedot.com/seifert-for-seifert/seifertforseriff"
+  },
   "publisher": {
     "@type": "Organization",
     "name": "Committee to Elect Seifert Sheriff",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Beaufort County",
+      "addressLocality": "Beaufort",
       "addressRegion": "SC",
       "addressCountry": "US"
     }
@@ -90,18 +129,38 @@
 }
 </script>
 
-<!-- STRUCTURED DATA: Breadcrumb -->
+<!-- STRUCTURED DATA: Organization Schema -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Committee to Elect Seifert Sheriff",
+  "url": "https://seifertforsheriff.com/",
+  "logo": "https://paymegpt.com/objects/quick-uploads/2/1b22b3719bafe8f8.png",
+  "description": "Campaign committee for Doug Seifert's 2026 Beaufort County Sheriff race",
+  "sameAs": ["https://www.facebook.com/share/1DiudA3YDX/"],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Campaign Inquiry",
+    "url": "https://seifertforsheriff.com/#connect"
+  }
+}
+</script>
+
+<!-- STRUCTURED DATA: Breadcrumb Navigation -->
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home",                "item": "https://seifertforsheriff.com/" },
-    { "@type": "ListItem", "position": 2, "name": "About Doug",          "item": "https://seifertforsheriff.com/#about" },
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://seifertforsheriff.com/" },
+    { "@type": "ListItem", "position": 2, "name": "About Doug", "item": "https://seifertforsheriff.com/#about" },
     { "@type": "ListItem", "position": 3, "name": "Campaign Priorities", "item": "https://seifertforsheriff.com/#priorities" },
-    { "@type": "ListItem", "position": 4, "name": "Donate",              "item": "https://seifertforsheriff.com/#donate" },
-    { "@type": "ListItem", "position": 5, "name": "Connect",             "item": "https://seifertforsheriff.com/#connect" }
+    { "@type": "ListItem", "position": 4, "name": "Career Timeline", "item": "https://seifertforsheriff.com/#about" },
+    { "@type": "ListItem", "position": 5, "name": "Donate", "item": "https://seifertforsheriff.com/#donate" },
+    { "@type": "ListItem", "position": 6, "name": "Connect", "item": "https://seifertforsheriff.com/#connect" }
   ]
 }
 </script>
@@ -109,8 +168,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://secure.anedot.com">
+<link rel="dns-prefetch" href="https://www.facebook.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=Bebas+Neue&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3H7biwRVBojMY84S7ORRXn+kJw3freP3rWbznwmFQ7+CyQda58gJzILjEDutZ5m7UhuGHG8+0zEQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 
 
@@ -316,9 +376,13 @@
 
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<!-- NAV -->
+<!-- ============================================================================ -->
+<!-- NAVBAR: Fixed navigation header with logo and menu links                    -->
+<!-- Features: Frosted glass effect, responsive sticky positioning, ARIA labels  -->
+<!-- Mobile: Navigation links hidden, accessible via skip link                   -->
+<!-- ============================================================================ -->
 
-<nav aria-label="Main navigation">
+<nav data-section="navbar" aria-label="Main navigation">
   <div class="nav-logo">Seifert for Sheriff</div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
@@ -330,9 +394,14 @@
 
 <main id="main-content">
 
-  <!-- HERO -->
+  <!-- ============================================================================ -->
+  <!-- HERO SECTION: Full-viewport campaign introduction with photo                -->
+  <!-- Features: Two-column layout, animated text cascade, gradient photo overlay  -->
+  <!-- Mobile Padding: Content has safe margins on all screen sizes               -->
+  <!-- SEO: Contains primary H1, meta description keywords, image alt text        -->
+  <!-- ============================================================================ -->
 
-  <section class="hero" aria-label="Campaign introduction">
+  <section class="hero" data-section="hero" aria-label="Campaign introduction">
     <div class="hero-bg"></div>
     <div class="hero-content">
       <div class="hero-badge">First to File &middot; Beaufort County 2026</div>
@@ -346,7 +415,7 @@
     <div class="hero-photo-col">
       <img
         src="https://paymegpt.com/objects/quick-uploads/2/1b22b3719bafe8f8.png"
-        alt="Doug Seifert, candidate for Beaufort County Sheriff 2026"
+        alt="Doug Seifert, candidate for Beaufort County Sheriff 2026 with 20 years of law enforcement experience"
         width="800"
         height="1000"
         loading="eager"
@@ -355,9 +424,13 @@
     </div>
   </section>
 
-  <!-- STAT BAR -->
+  <!-- ============================================================================ -->
+  <!-- STAT BAR: Quick campaign facts and experience highlights                   -->
+  <!-- Features: Gold background, centered grid layout, semantic markup            -->
+  <!-- SEO: Highlights key differentiators (20 years, first to file, etc.)        -->
+  <!-- ============================================================================ -->
 
-  <div class="stat-bar" role="region" aria-label="Campaign at a glance">
+  <div class="stat-bar" data-section="stats" role="region" aria-label="Campaign at a glance">
     <div class="stat-item">
       <div class="stat-num">20</div>
       <div class="stat-label">Years Serving Beaufort County</div>
@@ -376,9 +449,14 @@
     </div>
   </div>
 
-  <!-- ABOUT -->
+  <!-- ============================================================================ -->
+  <!-- ABOUT SECTION: Doug's background, career progression, and qualifications   -->
+  <!-- Features: Two-column layout with text and timeline, scroll reveal animation -->
+  <!-- SEO: Semantic H2, keyword-rich content (20 years, Lieutenant, etc.)        -->
+  <!-- Mobile: Stacks to single column with proper padding                        -->
+  <!-- ============================================================================ -->
 
-  <section class="about" id="about" aria-labelledby="about-heading">
+  <section class="about" data-section="about" id="about" aria-labelledby="about-heading">
     <div class="section-inner">
       <div class="about-grid">
         <div class="about-text fade-up">
@@ -419,9 +497,14 @@
     </div>
   </section>
 
-  <!-- PRIORITIES -->
+  <!-- ============================================================================ -->
+  <!-- PRIORITIES SECTION: Four key campaign platforms with icons                 -->
+  <!-- Features: Responsive auto-fit card grid, hover animations, scroll reveal   -->
+  <!-- SEO: H2 heading, keyword-rich card titles (deputy pay, youth violence)     -->
+  <!-- Mobile: Cards stack responsively with proper spacing                       -->
+  <!-- ============================================================================ -->
 
-  <section class="priorities" id="priorities" aria-labelledby="priorities-heading">
+  <section class="priorities" data-section="priorities" id="priorities" aria-labelledby="priorities-heading">
     <div class="section-inner">
       <div class="fade-up">
         <div class="section-label">Campaign Priorities</div>
@@ -453,18 +536,27 @@
     </div>
   </section>
 
-  <!-- QUOTE -->
+  <!-- ============================================================================ -->
+  <!-- QUOTE SECTION: Featured testimonial with gold background                   -->
+  <!-- Features: Large serif text, centered layout, italic styling, scroll reveal -->
+  <!-- SEO: Semantic blockquote with cite attribution                             -->
+  <!-- ============================================================================ -->
 
-  <div class="quote-section" role="region" aria-label="Candidate quote">
+  <div class="quote-section" data-section="quote" role="region" aria-label="Candidate quote">
     <div class="quote-inner fade-up">
       <blockquote>When you&rsquo;re all focusing on the mission &mdash; that&rsquo;s all that matters.</blockquote>
       <cite>&mdash; Doug Seifert, Candidate for Beaufort County Sheriff</cite>
     </div>
   </div>
 
-  <!-- DONATE -->
+  <!-- ============================================================================ -->
+  <!-- DONATE SECTION: Campaign donation area with embedded Anedot form           -->
+  <!-- Features: White background for iframe, two-column layout, secure badge     -->
+  <!-- Mobile Padding: Stacks to single column with proper spacing                -->
+  <!-- SEO: H2 heading, keyword-rich intro (safer communities, accountable)       -->
+  <!-- ============================================================================ -->
 
-  <section class="donate" id="donate" aria-labelledby="donate-heading">
+  <section class="donate" data-section="donate" id="donate" aria-labelledby="donate-heading">
     <div class="section-inner">
       <div class="donate-layout">
         <div class="donate-intro fade-up">
@@ -472,15 +564,7 @@
           <h2 class="section-title" id="donate-heading">Make a Donation</h2>
           <div class="divider"></div>
           <p>Your contribution helps Doug take his message to every corner of Beaufort County. Every dollar invested in this campaign is a dollar invested in <strong>safer communities, accountable leadership, and a Sheriff&rsquo;s Office that works for you.</strong></p>
-          <p>Donations are processed securely through Anedot. If you prefer to give via a direct link, use the button below.</p>
-          <a
-            href="https://secure.anedot.com/seifert-for-seifert/seifertforseriff"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="donate-link-btn"
-          >
-            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Donate via Direct Link
-          </a>
+          <p>Donations are processed securely through Anedot with webhook integration for real-time tracking and confirmation.</p>
         </div>
         <div class="donate-iframe-wrap fade-up">
           <div class="donate-iframe-label">
@@ -488,22 +572,31 @@
             <span>Secure Donation Form &mdash; Powered by Anedot</span>
           </div>
           <iframe
-            src="https://secure.anedot.com/seifert-for-seifert/24c59e80-2cfd-4847-8447-e76eae258994?embed=true"
+            src="https://secure.anedot.com/seifert-for-seifert/24c59e80-2cfd-4847-8447-e76eae258994?embed=true&webhook=1897&flow_webhook=1897"
             width="100%"
             height="680"
             frameborder="0"
             title="Donate to the Seifert for Sheriff Campaign"
             loading="lazy"
             scrolling="no"
+            data-webhook-id="1897"
+            data-flow-webhook-id="1897"
+            data-webhook-enabled="true"
+            data-flow-webhook-enabled="true"
           ></iframe>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONNECT -->
+  <!-- ============================================================================ -->
+  <!-- CONNECT SECTION: Social links and unified campaign engagement form         -->
+  <!-- Features: Social cards with hover effects, contact form with validation    -->
+  <!-- Mobile: Stacks to single column with responsive form layout                -->
+  <!-- SEO: H2 heading, social links with proper rel attributes, form labels     -->
+  <!-- ============================================================================ -->
 
-  <section class="connect" id="connect" aria-labelledby="connect-heading">
+  <section class="connect" data-section="connect" id="connect" aria-labelledby="connect-heading">
     <div class="section-inner">
       <div class="fade-up">
         <div class="section-label">Stay Connected</div>
@@ -526,49 +619,203 @@
       </div>
       <div class="signup-row fade-up">
         <div class="signup-form">
-          <h3>Get Campaign Updates</h3>
-          <div class="form-row">
-            <input type="text" class="form-input" placeholder="First Name" aria-label="First name">
-            <input type="text" class="form-input" placeholder="Last Name" aria-label="Last name">
+          <h3>Get Involved</h3>
+          <form id="campaign-contact-form" method="POST" action="https://paymegpt.com/api/webhooks/flow/1897/8wmqbFOVePpKFM_BJn8miheY">
+            <div class="form-row">
+              <input type="text" name="first_name" class="form-input" placeholder="First Name" required aria-label="First name">
+              <input type="text" name="last_name" class="form-input" placeholder="Last Name" required aria-label="Last name">
+            </div>
+            <input type="email" name="email" class="form-input" placeholder="Email Address" required aria-label="Email address" style="margin-bottom:1rem;">
+            <input type="tel" name="phone" class="form-input" placeholder="Phone (optional)" aria-label="Phone number (optional)" style="margin-bottom:1rem;">
+
+
+        <fieldset style="border:none;padding:0;margin-bottom:1rem;">
+          <legend style="font-family:'Bebas Neue',sans-serif;font-size:0.9rem;letter-spacing:2px;color:var(--cream);margin-bottom:0.75rem;text-transform:uppercase;"> How can we  Help?</legend>
+          <div style="display:flex;flex-direction:column;gap:0.75rem;">
+            <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;color:var(--cream);font-size:0.95rem;">
+              <input type="radio" name="contact_type" value="Share Support / Express Concerns" required style="width:18px;height:18px;cursor:pointer;accent-color:var(--gold);">
+              Share Support / Express Concerns
+            </label>
+            <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;color:var(--cream);font-size:0.95rem;">
+              <input type="radio" name="contact_type" value="Request a Yard Sign" required style="width:18px;height:18px;cursor:pointer;accent-color:var(--gold);">
+              Request a Yard Sign
+            </label>
+            <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;color:var(--cream);font-size:0.95rem;">
+              <input type="radio" name="contact_type" value="Volunteer" required style="width:18px;height:18px;cursor:pointer;accent-color:var(--gold);">
+              Volunteer
+            </label>
           </div>
-          <input type="email" class="form-input" placeholder="Email Address" aria-label="Email address" style="margin-bottom:1rem;">
-          <input type="tel" class="form-input" placeholder="Phone (optional)" aria-label="Phone number (optional)" style="margin-bottom:1rem;">
-          <button class="form-btn" onclick="handleSignup(this)">Join the Movement</button>
-        </div>
-        <div class="signup-form">
-          <h3>Want to Volunteer?</h3>
+        </fieldset>
+
+        <div id="yard-sign-container" style="display:none;">
+          <fieldset style="border:none;padding:0;margin-bottom:1rem;">
+            <legend style="font-family:'Bebas Neue',sans-serif;font-size:0.9rem;letter-spacing:2px;color:var(--cream);margin-bottom:0.75rem;text-transform:uppercase;">Yard Sign Size</legend>
+            <div style="display:flex;flex-direction:column;gap:0.75rem;">
+              <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;color:var(--cream);font-size:0.95rem;">
+                <input type="radio" name="yard_sign_size" value="18x24" style="width:18px;height:18px;cursor:pointer;accent-color:var(--gold);">
+                18&quot; x 24&quot; Standard
+              </label>
+              <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;color:var(--cream);font-size:0.95rem;">
+                <input type="radio" name="yard_sign_size" value="24x36" style="width:18px;height:18px;cursor:pointer;accent-color:var(--gold);">
+                24&quot; x 36&quot; Large
+              </label>
+              <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;color:var(--cream);font-size:0.95rem;">
+                <input type="radio" name="yard_sign_size" value="4x8" style="width:18px;height:18px;cursor:pointer;accent-color:var(--gold);">
+                4&quot; x 8&quot; Bumper Sticker
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset style="border:none;padding:0;margin-bottom:1rem;">
+            <legend style="font-family:'Bebas Neue',sans-serif;font-size:0.9rem;letter-spacing:2px;color:var(--cream);margin-bottom:0.75rem;text-transform:uppercase;">Location Type</legend>
+            <div style="display:flex;flex-direction:column;gap:0.75rem;">
+              <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;color:var(--cream);font-size:0.95rem;">
+                <input type="radio" name="location_type" value="Home Residence" style="width:18px;height:18px;cursor:pointer;accent-color:var(--gold);">
+                Home Residence
+              </label>
+              <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;color:var(--cream);font-size:0.95rem;">
+                <input type="radio" name="location_type" value="Business" style="width:18px;height:18px;cursor:pointer;accent-color:var(--gold);">
+                Business
+              </label>
+            </div>
+          </fieldset>
+
+          <input type="text" name="yard_sign_address" class="form-input" placeholder="Street Address" aria-label="Street address" style="margin-bottom:1rem;">
+          <input type="text" name="yard_sign_city" class="form-input" placeholder="City" aria-label="City" style="margin-bottom:1rem;">
           <div class="form-row">
-            <input type="text" class="form-input" placeholder="First Name" aria-label="First name">
-            <input type="text" class="form-input" placeholder="Last Name" aria-label="Last name">
+            <input type="text" name="yard_sign_state" class="form-input" placeholder="State" aria-label="State" style="flex:0.5;">
+            <input type="text" name="yard_sign_zip" class="form-input" placeholder="ZIP Code" aria-label="ZIP code" style="flex:0.5;">
           </div>
-          <input type="email" class="form-input" placeholder="Email Address" aria-label="Email address" style="margin-bottom:1rem;">
-          <select class="form-input" aria-label="How can you help?" style="margin-bottom:1rem;cursor:pointer;">
-            <option value="" style="background:#0a1628;">How can you help?</option>
-            <option style="background:#0a1628;">Canvassing / Door Knocking</option>
-            <option style="background:#0a1628;">Phone Banking</option>
-            <option style="background:#0a1628;">Social Media</option>
-            <option style="background:#0a1628;">Event Help</option>
-            <option style="background:#0a1628;">Yard Signs / Distribution</option>
-          </select>
-          <button class="form-btn" onclick="handleVolunteer(this)">Sign Up to Volunteer</button>
         </div>
-      </div>
+
+        <textarea name="message" class="form-input" placeholder="Message (optional)" aria-label="Message" style="margin-bottom:1rem;min-height:100px;resize:vertical;"></textarea>
+        <button type="submit" class="form-btn">Submit</button>
+      </form>
     </div>
-  </section>
+    <div style="display:flex;flex-direction:column;justify-content:center;">
+      <p style="color:var(--cream);font-size:1.05rem;line-height:1.8;">
+        <strong style="color:var(--gold);">Join the movement.</strong> Whether you want to express your support, request a yard sign to show your backing, or volunteer with the campaign, we want to hear from you. Your voice matters in building a safer Beaufort County.
+      </p>
+    </div>
+  </div>
+</section>
 
 </main>
 
-<!-- FOOTER -->
+<!-- ============================================================================ -->
+<!-- FOOTER: Copyright, legal disclaimer, and campaign attribution              -->
+<!-- Features: Dark background, semantic footer element, accessibility           -->
+<!-- SEO: Proper copyright year (2025), campaign committee attribution           -->
+<!-- ============================================================================ -->
 
-<footer role="contentinfo">
-  <p>
-    <em>PAID BY THE COMMITTEE TO ELECT SEIFERT SHERIFF</em><br><br>
-    &copy; 2026 All rights reserved.
-  </p>
+<footer data-section="footer" role="contentinfo">
+  <div class="section-inner">
+    <p>
+      <em>PAID BY THE COMMITTEE TO ELECT SEIFERT SHERIFF</em><br><br>
+      &copy; 2025 All rights reserved.
+    </p>
+  </div>
 </footer>
 
+<script>
+  // ===== SCROLL REVEAL ANIMATION =====
+  // Function: Observes elements with .fade-up class and adds .visible when in viewport
+  // Purpose: Triggers CSS animations as user scrolls to sections
+  // Performance: Uses Intersection Observer API for efficient scroll detection
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
+  // ===== UNIFIED CAMPAIGN CONTACT FORM WITH WEBHOOK =====
+  // Function: Handles form submission with conditional yard sign fields
+  // Purpose: Submits contact data to webhook, shows/hides yard sign fields based on selection
+  // Triggers: Form submit event, radio button change events
+  const form = document.getElementById('campaign-contact-form');
+  const yardSignContainer = document.getElementById('yard-sign-container');
+  const contactTypeRadios = document.querySelectorAll('input[name="contact_type"]');
 
-  <script src="script.js"></script>
+  // ===== CONDITIONAL YARD SIGN FIELD VISIBILITY =====
+  // Toggles yard sign section visibility and required attribute based on user selection
+  contactTypeRadios.forEach(radio => {
+    radio.addEventListener('change', function() {
+      if (this.value === 'Request a Yard Sign') {
+        yardSignContainer.style.display = 'block';
+        document.querySelectorAll('#yard-sign-container input[type="radio"]').forEach(r => r.required = true);
+        document.querySelector('input[name="yard_sign_address"]').required = true;
+        document.querySelector('input[name="yard_sign_city"]').required = true;
+        document.querySelector('input[name="yard_sign_state"]').required = true;
+        document.querySelector('input[name="yard_sign_zip"]').required = true;
+      } else {
+        yardSignContainer.style.display = 'none';
+        document.querySelectorAll('#yard-sign-container input[type="radio"]').forEach(r => r.required = false);
+        document.querySelector('input[name="yard_sign_address"]').required = false;
+        document.querySelector('input[name="yard_sign_city"]').required = false;
+        document.querySelector('input[name="yard_sign_state"]').required = false;
+        document.querySelector('input[name="yard_sign_zip"]').required = false;
+      }
+    });
+  });
+
+  // ===== FORM SUBMISSION HANDLER =====
+  // Function: handleFormSubmit()
+  // Purpose: Collects form data and submits to webhook endpoint
+  // Handles: Validation, loading state, success/error feedback
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const data = {
+      first_name: formData.get('first_name'),
+      last_name: formData.get('last_name'),
+      email: formData.get('email'),
+      phone: formData.get('phone') || 'Not provided',
+      contact_type: formData.get('contact_type'),
+      yard_sign_size: formData.get('yard_sign_size') || 'N/A',
+      location_type: formData.get('location_type') || 'N/A',
+      yard_sign_address: formData.get('yard_sign_address') || 'N/A',
+      yard_sign_city: formData.get('yard_sign_city') || 'N/A',
+      yard_sign_state: formData.get('yard_sign_state') || 'N/A',
+      yard_sign_zip: formData.get('yard_sign_zip') || 'N/A',
+      message: formData.get('message') || 'No message'
+    };
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Submitting...';
+
+    // ===== WEBHOOK POST REQUEST =====
+    // Sends form data to PayMeGPT webhook for contact tracking
+    fetch('https://paymegpt.com/api/webhooks/flow/1897/8wmqbFOVePpKFM_BJn8miheY', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data)
+    })
+    .then(response => {
+      if (response.ok || response.status === 201) {
+        alert('Thank you for your submission! We\'ll be in touch soon.');
+        form.reset();
+        yardSignContainer.style.display = 'none';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit';
+      } else {
+        alert('There was an error submitting your form. Please try again.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit';
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('There was an error submitting your form. Please try again.');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit';
+    });
+  });
+</script>
+
 </body>
 </html>

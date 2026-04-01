@@ -1,4 +1,5 @@
-:root {
+/* ===== CSS VARIABLES: Color Palette & Design Tokens ===== */
+  :root {
     --navy:       #0a1628;
     --deep-navy:  #060e1c;
     --gold:       #c9a84c;
@@ -9,17 +10,30 @@
     --text-muted: #8a9bb5;
   }
 
-  /* RESET */
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  /* ===== GLOBAL RESET & BASE STYLES ===== */
+  /* Ensures consistent box-sizing and removes default margins/padding */
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* ===== HTML & BODY BASE STYLES ===== */
+  /* Smooth scroll behavior for anchor links, dark theme base */
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     font-family: 'Source Serif 4', serif;
     background: var(--navy);
     color: var(--cream);
     overflow-x: hidden;
+    line-height: 1.6;
   }
 
-  /* SKIP LINK */
+  /* ===== SKIP LINK FOR ACCESSIBILITY ===== */
+  /* Hidden by default, visible on focus for keyboard navigation */
   .skip-link {
     position: absolute;
     top: -100px;
@@ -34,23 +48,31 @@
     text-decoration: none;
     transition: top 0.2s;
   }
-  .skip-link:focus { top: 0.5rem; }
 
-  /* NAV */
+  .skip-link:focus {
+    top: 0.5rem;
+  }
+
+  /* ===== NAVIGATION STYLES ===== */
+  /* Fixed header with frosted glass effect and smooth scrolling */
   nav {
     position: fixed;
-    top: 0; left: 0; right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
-    background: rgba(6,14,28,0.96);
+    background: rgba(6, 14, 28, 0.96);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(201,168,76,0.25);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.25);
     padding: 0 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 64px;
   }
+
+  /* ===== NAV LOGO STYLES ===== */
   .nav-logo {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.4rem;
@@ -58,7 +80,14 @@
     color: var(--gold);
     text-decoration: none;
   }
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
+
+  /* ===== NAV LINKS STYLES ===== */
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
   .nav-links a {
     color: var(--cream);
     text-decoration: none;
@@ -68,9 +97,13 @@
     font-weight: 300;
     transition: color 0.2s;
   }
-  .nav-links a:hover { color: var(--gold); }
 
-  /* HERO */
+  .nav-links a:hover {
+    color: var(--gold);
+  }
+
+  /* ===== HERO SECTION STYLES ===== */
+  /* Full-viewport hero with two-column layout: content + image */
   .hero {
     min-height: 100vh;
     display: grid;
@@ -79,12 +112,16 @@
     padding-top: 64px;
     overflow: hidden;
   }
+
+  /* ===== HERO BACKGROUND PATTERN ===== */
+  /* Subtle scanline effect for visual interest */
   .hero-bg {
     position: absolute;
     inset: 0;
     background: var(--deep-navy);
     z-index: 0;
   }
+
   .hero-bg::before {
     content: '';
     position: absolute;
@@ -93,10 +130,13 @@
       0deg,
       transparent,
       transparent 2px,
-      rgba(201,168,76,0.018) 2px,
-      rgba(201,168,76,0.018) 4px
+      rgba(201, 168, 76, 0.018) 2px,
+      rgba(201, 168, 76, 0.018) 4px
     );
   }
+
+  /* ===== HERO CONTENT COLUMN ===== */
+  /* Left column with text, positioned above background */
   .hero-content {
     position: relative;
     z-index: 2;
@@ -105,6 +145,9 @@
     flex-direction: column;
     justify-content: center;
   }
+
+  /* ===== HERO BADGE ===== */
+  /* "First to File" red badge with animation */
   .hero-badge {
     display: inline-block;
     background: var(--red);
@@ -117,6 +160,9 @@
     font-weight: 600;
     animation: fadeUp 0.6s ease both;
   }
+
+  /* ===== HERO H1 STYLES ===== */
+  /* Primary headline with staggered animation */
   .hero h1 {
     font-family: 'Playfair Display', serif;
     font-size: clamp(3rem, 5.5vw, 6rem);
@@ -125,7 +171,14 @@
     color: var(--white);
     animation: fadeUp 0.6s 0.1s ease both;
   }
-  .hero h1 span { color: var(--gold); display: block; }
+
+  .hero h1 span {
+    color: var(--gold);
+    display: block;
+  }
+
+  /* ===== HERO SUBTITLE ===== */
+  /* "For Beaufort County Sheriff" text */
   .hero-sub {
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(1rem, 2vw, 1.6rem);
@@ -134,28 +187,39 @@
     margin: 1.5rem 0 1.8rem;
     animation: fadeUp 0.6s 0.2s ease both;
   }
+
+  /* ===== HERO TAGLINE ===== */
+  /* Supporting text with italic styling */
   .hero-tagline {
     font-size: 1.05rem;
     font-weight: 300;
     font-style: italic;
-    color: rgba(245,240,232,0.82);
+    color: rgba(245, 240, 232, 0.82);
     max-width: 460px;
     line-height: 1.75;
     margin-bottom: 2.5rem;
     animation: fadeUp 0.6s 0.3s ease both;
   }
+
+  /* ===== HERO CTA BUTTONS ===== */
   .hero-ctas {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
     animation: fadeUp 0.6s 0.4s ease both;
   }
+
+  /* ===== HERO PHOTO COLUMN ===== */
+  /* Right column with candidate photo and overlays */
   .hero-photo-col {
     position: relative;
     z-index: 2;
     overflow: hidden;
     min-height: calc(100vh - 64px);
   }
+
+  /* ===== HERO IMAGE STYLES ===== */
+  /* Full-coverage image with optimized object-fit */
   .hero-photo-col img {
     width: 100%;
     height: 100%;
@@ -163,15 +227,21 @@
     object-position: center top;
     display: block;
   }
+
+  /* ===== HERO PHOTO GRADIENT OVERLAY ===== */
+  /* Creates fade effect from left and bottom */
   .hero-photo-col::before {
     content: '';
     position: absolute;
     inset: 0;
     z-index: 1;
     background:
-      linear-gradient(to right, var(--deep-navy) 0%, rgba(6,14,28,0.1) 35%),
+      linear-gradient(to right, var(--deep-navy) 0%, rgba(6, 14, 28, 0.1) 35%),
       linear-gradient(to top, var(--deep-navy) 0%, transparent 15%);
   }
+
+  /* ===== HERO PHOTO LABEL ===== */
+  /* Vertical text overlay in bottom-right */
   .hero-photo-col::after {
     content: 'BEAUFORT COUNTY \00B7 SHERIFF CANDIDATE 2026';
     position: absolute;
@@ -181,13 +251,14 @@
     font-family: 'Bebas Neue', sans-serif;
     font-size: 0.65rem;
     letter-spacing: 3px;
-    color: rgba(201,168,76,0.6);
+    color: rgba(201, 168, 76, 0.6);
     writing-mode: vertical-rl;
   }
 
-  /* BUTTONS */
+  /* ===== BUTTON STYLES ===== */
+  /* Outline button with hover effect */
   .btn-outline {
-    border: 1px solid rgba(245,240,232,0.5);
+    border: 1px solid rgba(245, 240, 232, 0.5);
     color: var(--cream);
     padding: 1rem 2.5rem;
     text-decoration: none;
@@ -197,9 +268,14 @@
     transition: border-color 0.2s, color 0.2s;
     display: inline-block;
   }
-  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
 
-  /* STAT BAR */
+  .btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  /* ===== STAT BAR SECTION ===== */
+  /* Gold background with key statistics */
   .stat-bar {
     background: var(--gold);
     padding: 1.5rem 2rem;
@@ -208,24 +284,39 @@
     gap: 5rem;
     flex-wrap: wrap;
   }
-  .stat-item { text-align: center; }
+
+  /* ===== STAT ITEM STYLES ===== */
+  .stat-item {
+    text-align: center;
+  }
+
   .stat-num {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2.5rem;
     color: var(--navy);
     line-height: 1;
   }
+
   .stat-label {
     font-size: 0.68rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: rgba(10,22,40,0.65);
+    color: rgba(10, 22, 40, 0.65);
     font-weight: 600;
   }
 
-  /* SHARED */
-  section { padding: 6rem 2rem; }
-  .section-inner { max-width: 1100px; margin: 0 auto; }
+  /* ===== SHARED SECTION STYLES ===== */
+  /* Consistent padding and max-width for all main sections */
+  section {
+    padding: 6rem 2rem;
+  }
+
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* ===== SECTION LABEL (OVERLINE) STYLES ===== */
   .section-label {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 0.82rem;
@@ -234,6 +325,8 @@
     margin-bottom: 0.6rem;
     text-transform: uppercase;
   }
+
+  /* ===== SECTION TITLE (H2) STYLES ===== */
   .section-title {
     font-family: 'Playfair Display', serif;
     font-size: clamp(2rem, 4vw, 3rem);
@@ -242,6 +335,8 @@
     margin-bottom: 1.5rem;
     color: var(--white);
   }
+
+  /* ===== DECORATIVE DIVIDER ===== */
   .divider {
     width: 60px;
     height: 3px;
@@ -249,26 +344,48 @@
     margin-bottom: 3rem;
   }
 
-  /* ABOUT */
-  .about { background: var(--deep-navy); }
+  /* ===== ABOUT SECTION STYLES ===== */
+  .about {
+    background: var(--deep-navy);
+  }
+
+  /* ===== ABOUT GRID LAYOUT ===== */
+  /* Two columns: text left, timeline right */
   .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
     align-items: start;
   }
+
+  /* ===== ABOUT TEXT STYLES ===== */
   .about-text p {
-    color: rgba(245,240,232,0.8);
+    color: rgba(245, 240, 232, 0.8);
     line-height: 1.9;
     font-size: 1.02rem;
     margin-bottom: 1.5rem;
     font-weight: 300;
   }
-  .about-text p strong { color: var(--gold); font-weight: 600; }
 
-  /* TIMELINE */
-  .timeline { border-left: 2px solid rgba(201,168,76,0.3); padding-left: 2rem; }
-  .timeline-item { margin-bottom: 2rem; position: relative; }
+  .about-text p strong {
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  /* ===== TIMELINE STYLES ===== */
+  /* Vertical timeline with dots and connecting line */
+  .timeline {
+    border-left: 2px solid rgba(201, 168, 76, 0.3);
+    padding-left: 2rem;
+  }
+
+  /* ===== TIMELINE ITEM STYLES ===== */
+  .timeline-item {
+    margin-bottom: 2rem;
+    position: relative;
+  }
+
+  /* ===== TIMELINE DOT ===== */
   .timeline-item::before {
     content: '';
     position: absolute;
@@ -279,6 +396,8 @@
     background: var(--gold);
     border-radius: 50%;
   }
+
+  /* ===== TIMELINE YEAR LABEL ===== */
   .timeline-year {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 0.9rem;
@@ -286,54 +405,104 @@
     color: var(--gold);
     margin-bottom: 0.25rem;
   }
+
+  /* ===== TIMELINE TEXT ===== */
   .timeline-text {
-    color: rgba(245,240,232,0.75);
+    color: rgba(245, 240, 232, 0.75);
     font-size: 0.92rem;
     font-weight: 300;
     line-height: 1.6;
   }
-  .timeline-text strong { color: var(--cream); }
 
-  /* PRIORITIES */
-  .priorities { background: var(--navy); }
+  .timeline-text strong {
+    color: var(--cream);
+  }
+
+  /* ===== PRIORITIES SECTION STYLES ===== */
+  .priorities {
+    background: var(--navy);
+  }
+
+  /* ===== PRIORITY GRID LAYOUT ===== */
+  /* Responsive auto-fit grid for priority cards */
   .priority-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.5rem;
     margin-top: 1rem;
   }
+
+  /* ===== PRIORITY CARD STYLES ===== */
+  /* Cards with hover animation and top border accent */
   .priority-card {
-    border: 1px solid rgba(201,168,76,0.2);
+    border: 1px solid rgba(201, 168, 76, 0.2);
     padding: 2rem;
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.02);
     transition: border-color 0.3s, transform 0.3s;
     position: relative;
     overflow: hidden;
   }
+
+  /* ===== PRIORITY CARD TOP BORDER ANIMATION ===== */
   .priority-card::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 3px;
     background: var(--gold);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s;
   }
-  .priority-card:hover { border-color: rgba(201,168,76,0.5); transform: translateY(-4px); }
-  .priority-card:hover::before { transform: scaleX(1); }
-  .priority-icon { font-size: 2rem; margin-bottom: 1.2rem; color: var(--gold); }
+
+  .priority-card:hover {
+    border-color: rgba(201, 168, 76, 0.5);
+    transform: translateY(-4px);
+  }
+
+  .priority-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  /* ===== PRIORITY ICON STYLES ===== */
+  .priority-icon {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    color: var(--gold);
+  }
+
+  /* ===== PRIORITY CARD HEADING ===== */
   .priority-card h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.15rem;
     color: var(--white);
     margin-bottom: 0.75rem;
   }
-  .priority-card p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.7; font-weight: 300; }
 
-  /* QUOTE */
-  .quote-section { background: var(--gold); padding: 5rem 2rem; }
-  .quote-inner { max-width: 800px; margin: 0 auto; text-align: center; }
+  /* ===== PRIORITY CARD DESCRIPTION ===== */
+  .priority-card p {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* ===== QUOTE SECTION STYLES ===== */
+  /* Full-width gold section with centered quote */
+  .quote-section {
+    background: var(--gold);
+    padding: 5rem 2rem;
+  }
+
+  .quote-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* ===== BLOCKQUOTE STYLES ===== */
   blockquote {
     font-family: 'Playfair Display', serif;
     font-size: clamp(1.4rem, 3vw, 2.1rem);
@@ -342,6 +511,8 @@
     line-height: 1.5;
     margin-bottom: 1.5rem;
   }
+
+  /* ===== BLOCKQUOTE OPENING QUOTATION MARK ===== */
   blockquote::before {
     content: '\201C';
     font-size: 5rem;
@@ -350,20 +521,24 @@
     opacity: 0.22;
     margin-right: 0.2rem;
   }
+
+  /* ===== CITATION STYLES ===== */
   cite {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 0.88rem;
     letter-spacing: 3px;
-    color: rgba(10,22,40,0.55);
+    color: rgba(10, 22, 40, 0.55);
   }
 
-  /* =============================================
-     DONATE — white section so iframe blends in
-     ============================================= */
+  /* ===== DONATE SECTION STYLES ===== */
+  /* White background for iframe integration */
   .donate {
     background: #ffffff;
     padding: 6rem 2rem;
   }
+
+  /* ===== DONATE LAYOUT GRID ===== */
+  /* Two columns: intro text left, iframe right */
   .donate-layout {
     display: grid;
     grid-template-columns: 1fr 1.6fr;
@@ -371,18 +546,35 @@
     align-items: start;
   }
 
-  /* Left-column text on white bg */
-  .donate .section-label { color: var(--gold); }
-  .donate .section-title { color: var(--navy); }
-  .donate .divider { background: var(--gold); }
+  /* ===== DONATE SECTION TEXT COLORS ===== */
+  /* Override cream/gold for white background context */
+  .donate .section-label {
+    color: var(--gold);
+  }
+
+  .donate .section-title {
+    color: var(--navy);
+  }
+
+  .donate .divider {
+    background: var(--gold);
+  }
+
+  /* ===== DONATE INTRO PARAGRAPH STYLES ===== */
   .donate-intro p {
-    color: rgba(10,22,40,0.75);
+    color: rgba(10, 22, 40, 0.75);
     line-height: 1.9;
     font-size: 1.02rem;
     margin-bottom: 1.5rem;
     font-weight: 300;
   }
-  .donate-intro p strong { color: var(--navy); font-weight: 600; }
+
+  .donate-intro p strong {
+    color: var(--navy);
+    font-weight: 600;
+  }
+
+  /* ===== DONATE SECONDARY LINK BUTTON ===== */
   .donate-link-btn {
     display: inline-block;
     margin-top: 0.5rem;
@@ -395,38 +587,55 @@
     letter-spacing: 3px;
     transition: background 0.2s, color 0.2s, border-color 0.2s;
   }
+
   .donate-link-btn:hover {
     background: var(--navy);
     color: var(--gold);
     border-color: var(--navy);
   }
-  .donate-link-btn i { margin-right: 0.4rem; }
 
-  /* Iframe card */
+  .donate-link-btn i {
+    margin-right: 0.4rem;
+  }
+
+  /* ===== DONATE IFRAME WRAPPER ===== */
+  /* Card container for embedded donation form */
   .donate-iframe-wrap {
     position: relative;
     background: #ffffff;
-    border: 1px solid rgba(10,22,40,0.08);
-    box-shadow: 0 4px 24px rgba(10,22,40,0.07);
+    border: 1px solid rgba(10, 22, 40, 0.08);
+    box-shadow: 0 4px 24px rgba(10, 22, 40, 0.07);
     overflow: hidden;
   }
+
+  /* ===== DONATE IFRAME TOP ACCENT BAR ===== */
   .donate-iframe-wrap::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 4px;
     background: var(--gold);
     z-index: 1;
   }
+
+  /* ===== DONATE IFRAME LABEL ===== */
+  /* Header above iframe with lock icon */
   .donate-iframe-label {
     display: flex;
     align-items: center;
     gap: 0.6rem;
     padding: 0.85rem 1.25rem 0.75rem;
     background: #ffffff;
-    border-bottom: 1px solid rgba(10,22,40,0.07);
+    border-bottom: 1px solid rgba(10, 22, 40, 0.07);
   }
-  .donate-iframe-label i { color: var(--gold); font-size: 0.85rem; }
+
+  .donate-iframe-label i {
+    color: var(--gold);
+    font-size: 0.85rem;
+  }
+
   .donate-iframe-label span {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 0.78rem;
@@ -435,6 +644,8 @@
     text-transform: uppercase;
     opacity: 0.55;
   }
+
+  /* ===== DONATE IFRAME STYLES ===== */
   .donate-iframe-wrap iframe {
     display: block;
     width: 100%;
@@ -442,28 +653,49 @@
     border: none;
   }
 
-  /* CONNECT */
-  .connect { background: var(--navy); }
-  .social-grid { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 2rem; }
+  /* ===== CONNECT SECTION STYLES ===== */
+  .connect {
+    background: var(--navy);
+  }
+
+  /* ===== SOCIAL GRID LAYOUT ===== */
+  /* Flexible row layout for social cards */
+  .social-grid {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  /* ===== SOCIAL CARD STYLES ===== */
+  /* Individual social platform cards with hover effects */
   .social-card {
     flex: 1;
     min-width: 200px;
-    border: 1px solid rgba(201,168,76,0.2);
+    border: 1px solid rgba(201, 168, 76, 0.2);
     padding: 2rem;
     text-decoration: none;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.02);
     transition: border-color 0.3s, background 0.3s, transform 0.3s;
   }
+
   .social-card:hover {
     border-color: var(--gold);
-    background: rgba(201,168,76,0.06);
+    background: rgba(201, 168, 76, 0.06);
     transform: translateY(-3px);
   }
-  .social-icon { font-size: 2.2rem; color: var(--gold); }
+
+  /* ===== SOCIAL ICON STYLES ===== */
+  .social-icon {
+    font-size: 2.2rem;
+    color: var(--gold);
+  }
+
+  /* ===== SOCIAL CARD HEADING ===== */
   .social-card h3 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.05rem;
@@ -471,28 +703,54 @@
     color: var(--white);
     text-align: center;
   }
-  .social-handle { color: var(--gold); font-size: 0.82rem; font-weight: 600; }
-  .social-card p { font-size: 0.78rem; color: var(--text-muted); text-align: center; line-height: 1.5; }
 
+  /* ===== SOCIAL HANDLE STYLES ===== */
+  .social-handle {
+    color: var(--gold);
+    font-size: 0.82rem;
+    font-weight: 600;
+  }
+
+  /* ===== SOCIAL CARD DESCRIPTION ===== */
+  .social-card p {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  /* ===== SIGNUP ROW LAYOUT ===== */
+  /* Two-column layout for form and info */
   .signup-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     margin-top: 4rem;
     padding-top: 4rem;
-    border-top: 1px solid rgba(201,168,76,0.2);
+    border-top: 1px solid rgba(201, 168, 76, 0.2);
   }
+
+  /* ===== SIGNUP FORM HEADING ===== */
   .signup-form h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
     color: var(--white);
     margin-bottom: 1.5rem;
   }
-  .form-row { display: flex; gap: 1rem; margin-bottom: 1rem; }
+
+  /* ===== FORM ROW LAYOUT ===== */
+  .form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* ===== FORM INPUT STYLES ===== */
+  /* Text inputs with frosted glass effect */
   .form-input {
     flex: 1;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(201,168,76,0.2);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(201, 168, 76, 0.2);
     color: var(--cream);
     padding: 0.9rem 1rem;
     font-family: 'Source Serif 4', serif;
@@ -504,8 +762,16 @@
     appearance: none;
     border-radius: 0;
   }
-  .form-input:focus { border-color: var(--gold); }
-  .form-input::placeholder { color: rgba(245,240,232,0.28); }
+
+  .form-input:focus {
+    border-color: var(--gold);
+  }
+
+  .form-input::placeholder {
+    color: rgba(245, 240, 232, 0.28);
+  }
+
+  /* ===== FORM SUBMIT BUTTON STYLES ===== */
   .form-btn {
     width: 100%;
     background: transparent;
@@ -520,39 +786,96 @@
     margin-top: 0.5rem;
     border-radius: 0;
   }
-  .form-btn:hover { background: var(--gold); color: var(--navy); }
 
-  /* FOOTER */
+  .form-btn:hover {
+    background: var(--gold);
+    color: var(--navy);
+  }
+
+  /* ===== FOOTER STYLES ===== */
+  /* Dark background with minimal styling */
   footer {
     background: var(--deep-navy);
-    border-top: 1px solid rgba(201,168,76,0.2);
+    border-top: 1px solid rgba(201, 168, 76, 0.2);
     padding: 3rem 2rem;
     text-align: center;
   }
-  footer p { color: var(--text-muted); font-size: 0.8rem; line-height: 1.8; }
-  footer a { color: var(--gold); text-decoration: none; }
 
-  /* ANIMATIONS */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to   { opacity: 1; transform: translateY(0); }
+  /* ===== FOOTER TEXT STYLES ===== */
+  footer p {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    line-height: 1.8;
   }
+
+  footer a {
+    color: var(--gold);
+    text-decoration: none;
+  }
+
+  /* ===== ANIMATION: FADE UP ===== */
+  /* Used for staggered entrance animations */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* ===== FADE UP CLASS FOR SCROLL REVEAL ===== */
   .fade-up {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.7s ease, transform 0.7s ease;
   }
-  .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-  /* MOBILE */
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ===== RESPONSIVE: TABLET & MOBILE ===== */
+  /* Breakpoint: 900px and below */
   @media (max-width: 900px) {
-    .nav-links { display: none; }
-    .hero { grid-template-columns: 1fr; }
-    .hero-content { padding: 4rem 1.5rem 3rem; }
-    .hero-photo-col { min-height: 65vw; }
+    /* Hide desktop navigation links on mobile */
+    .nav-links {
+      display: none;
+    }
+
+    /* Stack hero columns vertically */
+    .hero {
+      grid-template-columns: 1fr;
+    }
+
+    /* Reduce hero padding on mobile */
+    .hero-content {
+      padding: 4rem 1.5rem 3rem;
+    }
+
+    /* Hero photo takes responsive height */
+    .hero-photo-col {
+      min-height: 65vw;
+    }
+
+    /* Stack two-column grids to single column */
     .about-grid,
     .signup-row,
-    .donate-layout { grid-template-columns: 1fr; gap: 3rem; }
-    .stat-bar { gap: 2rem; }
-    .donate-iframe-wrap iframe { height: 1150px; }
+    .donate-layout {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    /* Reduce stat bar gap */
+    .stat-bar {
+      gap: 2rem;
+    }
+
+    /* Increase iframe height for mobile viewing */
+    .donate-iframe-wrap iframe {
+      height: 1150px;
+    }
   }

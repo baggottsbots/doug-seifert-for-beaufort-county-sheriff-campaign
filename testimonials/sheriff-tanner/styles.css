@@ -12,9 +12,33 @@ body{
   color:var(--cream);
 }
 
+/* ===== BREADCRUMB NAVIGATION ===== */
+/* Mobile-first responsive breadcrumb with home link */
+/* Positioned above main nav, provides navigation context */
+.breadcrumb-nav{
+  background:rgba(6,14,28,.98);
+  padding:12px 24px;
+  border-bottom:1px solid rgba(201,168,76,.15);
+  font-size:13px;
+  position:relative;
+  z-index:9;
+}
+.breadcrumb-nav a{
+  color:var(--gold);
+  text-decoration:none;
+  transition:opacity 0.2s ease;
+}
+.breadcrumb-nav a:hover{
+  opacity:0.8;
+}
+.breadcrumb-nav span{
+  color:rgba(245,240,232,.6);
+  margin:0 8px;
+}
+
 /* NAV */
 nav{
-  position:fixed;top:0;width:100%;
+  position:fixed;top:40px;width:100%;
   background:rgba(6,14,28,.95);
   padding:16px 24px;
   display:flex;justify-content:space-between;
@@ -31,7 +55,7 @@ nav{
   display:grid;
   grid-template-columns:1fr 1fr;
   min-height:100vh;
-  padding-top:60px;
+  padding-top:100px;
 }
 .hero-content{
   padding:60px;
@@ -65,6 +89,8 @@ h1 span{color:var(--gold)}
   color:var(--cream);
   font-family:'Bebas Neue';
   letter-spacing:2px;
+  display:inline-block;
+  transition:all 0.2s ease;
 }
 .btn:hover{color:var(--gold);border-color:var(--gold)}
 
@@ -147,4 +173,12 @@ footer{
   .hero{grid-template-columns:1fr}
   .hero-content{padding:40px 20px}
   h1{font-size:42px}
+  nav{top:48px}
+  .breadcrumb-nav{
+    padding:10px 16px;
+    font-size:12px;
+  }
+  .breadcrumb-nav span{
+    margin:0 6px;
+  }
 }

@@ -11,15 +11,12 @@
   }
 
   /* ===== GLOBAL RESET & BASE STYLES ===== */
-  /* Ensures consistent box-sizing and removes default margins/padding */
   *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
 
-  /* ===== HTML & BODY BASE STYLES ===== */
-  /* Smooth scroll behavior for anchor links, dark theme base */
   html {
     scroll-behavior: smooth;
   }
@@ -33,7 +30,6 @@
   }
 
   /* ===== SKIP LINK FOR ACCESSIBILITY ===== */
-  /* Hidden by default, visible on focus for keyboard navigation */
   .skip-link {
     position: absolute;
     top: -100px;
@@ -54,7 +50,6 @@
   }
 
   /* ===== NAVIGATION STYLES ===== */
-  /* Fixed header with frosted glass effect and smooth scrolling */
   nav {
     position: fixed;
     top: 0;
@@ -72,7 +67,6 @@
     height: 64px;
   }
 
-  /* ===== NAV LOGO STYLES ===== */
   .nav-logo {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.4rem;
@@ -81,7 +75,6 @@
     text-decoration: none;
   }
 
-  /* ===== NAV LINKS STYLES ===== */
   .nav-links {
     display: flex;
     gap: 2rem;
@@ -103,7 +96,6 @@
   }
 
   /* ===== HERO SECTION STYLES ===== */
-  /* Full-viewport hero with two-column layout: content + image */
   .hero {
     min-height: 100vh;
     display: grid;
@@ -113,8 +105,6 @@
     overflow: hidden;
   }
 
-  /* ===== HERO BACKGROUND PATTERN ===== */
-  /* Subtle scanline effect for visual interest */
   .hero-bg {
     position: absolute;
     inset: 0;
@@ -135,8 +125,6 @@
     );
   }
 
-  /* ===== HERO CONTENT COLUMN ===== */
-  /* Left column with text, positioned above background */
   .hero-content {
     position: relative;
     z-index: 2;
@@ -146,8 +134,6 @@
     justify-content: center;
   }
 
-  /* ===== HERO BADGE ===== */
-  /* "First to File" red badge with animation */
   .hero-badge {
     display: inline-block;
     background: var(--red);
@@ -161,8 +147,6 @@
     animation: fadeUp 0.6s ease both;
   }
 
-  /* ===== HERO H1 STYLES ===== */
-  /* Primary headline with staggered animation */
   .hero h1 {
     font-family: 'Playfair Display', serif;
     font-size: clamp(3rem, 5.5vw, 6rem);
@@ -177,8 +161,6 @@
     display: block;
   }
 
-  /* ===== HERO SUBTITLE ===== */
-  /* "For Beaufort County Sheriff" text */
   .hero-sub {
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(1rem, 2vw, 1.6rem);
@@ -188,8 +170,6 @@
     animation: fadeUp 0.6s 0.2s ease both;
   }
 
-  /* ===== HERO TAGLINE ===== */
-  /* Supporting text with italic styling */
   .hero-tagline {
     font-size: 1.05rem;
     font-weight: 300;
@@ -201,7 +181,6 @@
     animation: fadeUp 0.6s 0.3s ease both;
   }
 
-  /* ===== HERO CTA BUTTONS ===== */
   .hero-ctas {
     display: flex;
     gap: 1rem;
@@ -209,8 +188,6 @@
     animation: fadeUp 0.6s 0.4s ease both;
   }
 
-  /* ===== HERO PHOTO COLUMN ===== */
-  /* Right column with candidate photo and overlays */
   .hero-photo-col {
     position: relative;
     z-index: 2;
@@ -218,8 +195,6 @@
     min-height: calc(100vh - 64px);
   }
 
-  /* ===== HERO IMAGE STYLES ===== */
-  /* Full-coverage image with optimized object-fit */
   .hero-photo-col img {
     width: 100%;
     height: 100%;
@@ -228,8 +203,6 @@
     display: block;
   }
 
-  /* ===== HERO PHOTO GRADIENT OVERLAY ===== */
-  /* Creates fade effect from left and bottom */
   .hero-photo-col::before {
     content: '';
     position: absolute;
@@ -240,8 +213,6 @@
       linear-gradient(to top, var(--deep-navy) 0%, transparent 15%);
   }
 
-  /* ===== HERO PHOTO LABEL ===== */
-  /* Vertical text overlay in bottom-right */
   .hero-photo-col::after {
     content: 'BEAUFORT COUNTY \00B7 SHERIFF CANDIDATE 2026';
     position: absolute;
@@ -255,8 +226,6 @@
     writing-mode: vertical-rl;
   }
 
-  /* ===== BUTTON STYLES ===== */
-  /* Outline button with hover effect */
   .btn-outline {
     border: 1px solid rgba(245, 240, 232, 0.5);
     color: var(--cream);
@@ -275,7 +244,6 @@
   }
 
   /* ===== STAT BAR SECTION ===== */
-  /* Gold background with key statistics */
   .stat-bar {
     background: var(--gold);
     padding: 1.5rem 2rem;
@@ -285,7 +253,6 @@
     flex-wrap: wrap;
   }
 
-  /* ===== STAT ITEM STYLES ===== */
   .stat-item {
     text-align: center;
   }
@@ -306,7 +273,6 @@
   }
 
   /* ===== SHARED SECTION STYLES ===== */
-  /* Consistent padding and max-width for all main sections */
   section {
     padding: 6rem 2rem;
   }
@@ -316,7 +282,6 @@
     margin: 0 auto;
   }
 
-  /* ===== SECTION LABEL (OVERLINE) STYLES ===== */
   .section-label {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 0.82rem;
@@ -326,7 +291,6 @@
     text-transform: uppercase;
   }
 
-  /* ===== SECTION TITLE (H2) STYLES ===== */
   .section-title {
     font-family: 'Playfair Display', serif;
     font-size: clamp(2rem, 4vw, 3rem);
@@ -336,7 +300,6 @@
     color: var(--white);
   }
 
-  /* ===== DECORATIVE DIVIDER ===== */
   .divider {
     width: 60px;
     height: 3px;
@@ -349,8 +312,6 @@
     background: var(--deep-navy);
   }
 
-  /* ===== ABOUT GRID LAYOUT ===== */
-  /* Two columns: text left, timeline right */
   .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -358,7 +319,6 @@
     align-items: start;
   }
 
-  /* ===== ABOUT TEXT STYLES ===== */
   .about-text p {
     color: rgba(245, 240, 232, 0.8);
     line-height: 1.9;
@@ -373,19 +333,16 @@
   }
 
   /* ===== TIMELINE STYLES ===== */
-  /* Vertical timeline with dots and connecting line */
   .timeline {
     border-left: 2px solid rgba(201, 168, 76, 0.3);
     padding-left: 2rem;
   }
 
-  /* ===== TIMELINE ITEM STYLES ===== */
   .timeline-item {
     margin-bottom: 2rem;
     position: relative;
   }
 
-  /* ===== TIMELINE DOT ===== */
   .timeline-item::before {
     content: '';
     position: absolute;
@@ -397,7 +354,6 @@
     border-radius: 50%;
   }
 
-  /* ===== TIMELINE YEAR LABEL ===== */
   .timeline-year {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 0.9rem;
@@ -406,7 +362,6 @@
     margin-bottom: 0.25rem;
   }
 
-  /* ===== TIMELINE TEXT ===== */
   .timeline-text {
     color: rgba(245, 240, 232, 0.75);
     font-size: 0.92rem;
@@ -423,8 +378,6 @@
     background: var(--navy);
   }
 
-  /* ===== PRIORITY GRID LAYOUT ===== */
-  /* Responsive auto-fit grid for priority cards */
   .priority-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -432,8 +385,6 @@
     margin-top: 1rem;
   }
 
-  /* ===== PRIORITY CARD STYLES ===== */
-  /* Cards with hover animation and top border accent */
   .priority-card {
     border: 1px solid rgba(201, 168, 76, 0.2);
     padding: 2rem;
@@ -443,7 +394,6 @@
     overflow: hidden;
   }
 
-  /* ===== PRIORITY CARD TOP BORDER ANIMATION ===== */
   .priority-card::before {
     content: '';
     position: absolute;
@@ -466,14 +416,12 @@
     transform: scaleX(1);
   }
 
-  /* ===== PRIORITY ICON STYLES ===== */
   .priority-icon {
     font-size: 2rem;
     margin-bottom: 1.2rem;
     color: var(--gold);
   }
 
-  /* ===== PRIORITY CARD HEADING ===== */
   .priority-card h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.15rem;
@@ -481,7 +429,6 @@
     margin-bottom: 0.75rem;
   }
 
-  /* ===== PRIORITY CARD DESCRIPTION ===== */
   .priority-card p {
     color: var(--text-muted);
     font-size: 0.88rem;
@@ -489,8 +436,110 @@
     font-weight: 300;
   }
 
+  /* ===== TESTIMONIAL SECTION STYLES ===== */
+  .testimonials {
+    background: var(--deep-navy);
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .testimonial-card {
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    transition: border-color 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonial-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+
+  .testimonial-card:hover {
+    border-color: rgba(201, 168, 76, 0.5);
+    transform: translateY(-4px);
+  }
+
+  .testimonial-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .testimonial-header {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonial-avatar {
+    width: 100px;
+    height: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid rgba(201, 168, 76, 0.3);
+  }
+
+  .testimonial-author-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    color: var(--white);
+    margin-bottom: 0.3rem;
+  }
+
+  .testimonial-author-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  .testimonial-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--cream);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+
+  .testimonial-quote::before {
+    content: '\201C';
+    font-size: 2.5rem;
+    line-height: 0;
+    vertical-align: -0.8rem;
+    opacity: 0.25;
+    margin-right: 0.3rem;
+  }
+
+  .testimonial-meta {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    line-height: 1.6;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(201, 168, 76, 0.15);
+  }
+
   /* ===== QUOTE SECTION STYLES ===== */
-  /* Full-width gold section with centered quote */
   .quote-section {
     background: var(--gold);
     padding: 5rem 2rem;
@@ -502,7 +551,6 @@
     text-align: center;
   }
 
-  /* ===== BLOCKQUOTE STYLES ===== */
   blockquote {
     font-family: 'Playfair Display', serif;
     font-size: clamp(1.4rem, 3vw, 2.1rem);
@@ -512,7 +560,6 @@
     margin-bottom: 1.5rem;
   }
 
-  /* ===== BLOCKQUOTE OPENING QUOTATION MARK ===== */
   blockquote::before {
     content: '\201C';
     font-size: 5rem;
@@ -522,7 +569,6 @@
     margin-right: 0.2rem;
   }
 
-  /* ===== CITATION STYLES ===== */
   cite {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 0.88rem;
@@ -531,14 +577,11 @@
   }
 
   /* ===== DONATE SECTION STYLES ===== */
-  /* White background for iframe integration */
   .donate {
     background: #ffffff;
     padding: 6rem 2rem;
   }
 
-  /* ===== DONATE LAYOUT GRID ===== */
-  /* Two columns: intro text left, iframe right */
   .donate-layout {
     display: grid;
     grid-template-columns: 1fr 1.6fr;
@@ -546,8 +589,6 @@
     align-items: start;
   }
 
-  /* ===== DONATE SECTION TEXT COLORS ===== */
-  /* Override cream/gold for white background context */
   .donate .section-label {
     color: var(--gold);
   }
@@ -560,7 +601,6 @@
     background: var(--gold);
   }
 
-  /* ===== DONATE INTRO PARAGRAPH STYLES ===== */
   .donate-intro p {
     color: rgba(10, 22, 40, 0.75);
     line-height: 1.9;
@@ -574,7 +614,6 @@
     font-weight: 600;
   }
 
-  /* ===== DONATE SECONDARY LINK BUTTON ===== */
   .donate-link-btn {
     display: inline-block;
     margin-top: 0.5rem;
@@ -598,8 +637,6 @@
     margin-right: 0.4rem;
   }
 
-  /* ===== DONATE IFRAME WRAPPER ===== */
-  /* Card container for embedded donation form */
   .donate-iframe-wrap {
     position: relative;
     background: #ffffff;
@@ -608,7 +645,6 @@
     overflow: hidden;
   }
 
-  /* ===== DONATE IFRAME TOP ACCENT BAR ===== */
   .donate-iframe-wrap::before {
     content: '';
     position: absolute;
@@ -620,8 +656,6 @@
     z-index: 1;
   }
 
-  /* ===== DONATE IFRAME LABEL ===== */
-  /* Header above iframe with lock icon */
   .donate-iframe-label {
     display: flex;
     align-items: center;
@@ -645,7 +679,6 @@
     opacity: 0.55;
   }
 
-  /* ===== DONATE IFRAME STYLES ===== */
   .donate-iframe-wrap iframe {
     display: block;
     width: 100%;
@@ -658,8 +691,6 @@
     background: var(--navy);
   }
 
-  /* ===== SOCIAL GRID LAYOUT ===== */
-  /* Flexible row layout for social cards */
   .social-grid {
     display: flex;
     gap: 1.5rem;
@@ -667,8 +698,6 @@
     margin-top: 2rem;
   }
 
-  /* ===== SOCIAL CARD STYLES ===== */
-  /* Individual social platform cards with hover effects */
   .social-card {
     flex: 1;
     min-width: 200px;
@@ -689,13 +718,11 @@
     transform: translateY(-3px);
   }
 
-  /* ===== SOCIAL ICON STYLES ===== */
   .social-icon {
     font-size: 2.2rem;
     color: var(--gold);
   }
 
-  /* ===== SOCIAL CARD HEADING ===== */
   .social-card h3 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.05rem;
@@ -704,14 +731,12 @@
     text-align: center;
   }
 
-  /* ===== SOCIAL HANDLE STYLES ===== */
   .social-handle {
     color: var(--gold);
     font-size: 0.82rem;
     font-weight: 600;
   }
 
-  /* ===== SOCIAL CARD DESCRIPTION ===== */
   .social-card p {
     font-size: 0.78rem;
     color: var(--text-muted);
@@ -719,8 +744,6 @@
     line-height: 1.5;
   }
 
-  /* ===== SIGNUP ROW LAYOUT ===== */
-  /* Two-column layout for form and info */
   .signup-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -730,7 +753,6 @@
     border-top: 1px solid rgba(201, 168, 76, 0.2);
   }
 
-  /* ===== SIGNUP FORM HEADING ===== */
   .signup-form h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
@@ -738,15 +760,12 @@
     margin-bottom: 1.5rem;
   }
 
-  /* ===== FORM ROW LAYOUT ===== */
   .form-row {
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
   }
 
-  /* ===== FORM INPUT STYLES ===== */
-  /* Text inputs with frosted glass effect */
   .form-input {
     flex: 1;
     background: rgba(255, 255, 255, 0.05);
@@ -771,7 +790,6 @@
     color: rgba(245, 240, 232, 0.28);
   }
 
-  /* ===== FORM SUBMIT BUTTON STYLES ===== */
   .form-btn {
     width: 100%;
     background: transparent;
@@ -793,7 +811,6 @@
   }
 
   /* ===== FOOTER STYLES ===== */
-  /* Dark background with minimal styling */
   footer {
     background: var(--deep-navy);
     border-top: 1px solid rgba(201, 168, 76, 0.2);
@@ -801,7 +818,6 @@
     text-align: center;
   }
 
-  /* ===== FOOTER TEXT STYLES ===== */
   footer p {
     color: var(--text-muted);
     font-size: 0.8rem;
@@ -814,7 +830,6 @@
   }
 
   /* ===== ANIMATION: FADE UP ===== */
-  /* Used for staggered entrance animations */
   @keyframes fadeUp {
     from {
       opacity: 0;
@@ -826,7 +841,6 @@
     }
   }
 
-  /* ===== FADE UP CLASS FOR SCROLL REVEAL ===== */
   .fade-up {
     opacity: 0;
     transform: translateY(30px);
@@ -839,29 +853,23 @@
   }
 
   /* ===== RESPONSIVE: TABLET & MOBILE ===== */
-  /* Breakpoint: 900px and below */
   @media (max-width: 900px) {
-    /* Hide desktop navigation links on mobile */
     .nav-links {
       display: none;
     }
 
-    /* Stack hero columns vertically */
     .hero {
       grid-template-columns: 1fr;
     }
 
-    /* Reduce hero padding on mobile */
     .hero-content {
       padding: 4rem 1.5rem 3rem;
     }
 
-    /* Hero photo takes responsive height */
     .hero-photo-col {
       min-height: 65vw;
     }
 
-    /* Stack two-column grids to single column */
     .about-grid,
     .signup-row,
     .donate-layout {
@@ -869,12 +877,14 @@
       gap: 3rem;
     }
 
-    /* Reduce stat bar gap */
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+
     .stat-bar {
       gap: 2rem;
     }
 
-    /* Increase iframe height for mobile viewing */
     .donate-iframe-wrap iframe {
       height: 1150px;
     }

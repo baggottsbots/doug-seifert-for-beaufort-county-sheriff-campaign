@@ -433,6 +433,24 @@
     </div>
   </div>
 
+  <!-- ===== FEATURED VIDEO SECTION ===== -->
+  <div class="video-section fade-up" data-section="video" role="region" aria-label="Campaign video">
+    <div class="video-section-inner">
+      <div class="section-label">Watch &middot; Campaign Introduction</div>
+      <h2 class="section-title">Hear From Doug Seifert</h2>
+      <div class="divider"></div>
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/BaqT2OnOECs?rel=0&modestbranding=1"
+          title="Doug Seifert for Beaufort County Sheriff 2026 - Campaign Introduction"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
   <section class="about" data-section="about" id="about" aria-labelledby="about-heading">
     <div class="section-inner">
       <div class="about-grid">
@@ -507,13 +525,6 @@
   </section>
 
   <!-- ===== TESTIMONIALS SECTION ===== -->
-
-  <!-- Data-driven testimonial structure for easy extensibility -->
-
-  <!-- Add more testimonials by adding objects to the testimonialsData array in the script -->
-
-  <!-- Each testimonial renders consistently without redundancy -->
-
   <section class="testimonials" data-section="testimonials" id="testimonials" aria-labelledby="testimonials-heading">
     <div class="section-inner">
       <div class="fade-up">
@@ -526,6 +537,30 @@
       </div>
     </div>
   </section>
+
+  <!-- ===== REAL STORIES VIDEO SECTION ===== -->
+  <div class="real-stories-section" data-section="real-stories" role="region" aria-label="Community testimonial video">
+    <div class="real-stories-inner">
+      <div class="real-stories-text fade-up">
+        <div class="section-label">Real Stories &middot; Community Impact</div>
+        <h2 class="real-stories-title">Leadership That Changes Lives</h2>
+        <div class="divider" style="margin-bottom:1.5rem;"></div>
+        <p>Krista Flanders was facing 20 years in prison and battling alcohol addiction when she met Doug Seifert. Today, she&rsquo;s celebrating over a decade of sobriety &mdash; and credits Doug&rsquo;s compassion and leadership for helping change her life.</p>
+        <p>This isn&rsquo;t politics. It&rsquo;s real people, real change, and real leadership.</p>
+      </div>
+      <div class="real-stories-video fade-up">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/XXSyi0Ck310?rel=0&modestbranding=1"
+            title="Krista Flanders testimonial for Doug Seifert for Beaufort County Sheriff"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="quote-section" data-section="quote" role="region" aria-label="Candidate quote">
     <div class="quote-inner fade-up">
@@ -597,78 +632,77 @@
             <input type="email" name="email" class="form-input" placeholder="Email Address" required aria-label="Email address" style="margin-bottom:1rem;">
             <input type="tel" name="phone" class="form-input" placeholder="Phone (optional)" aria-label="Phone number (optional)" style="margin-bottom:1rem;">
 
+            <fieldset style="border:none;padding:0;margin-bottom:1rem;">
+              <legend style="font-family:'Bebas Neue',sans-serif;font-size:0.9rem;letter-spacing:2px;color:var(--cream);margin-bottom:0.75rem;text-transform:uppercase;">How can we Help?</legend>
+              <div style="display:flex;flex-direction:column;gap:0.75rem;">
+                <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;color:var(--cream);font-size:0.95rem;">
+                  <input type="radio" name="contact_type" value="Share Support / Express Concerns" required style="width:18px;height:18px;cursor:pointer;accent-color:var(--gold);">
+                  Share Support / Express Concerns
+                </label>
+                <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;color:var(--cream);font-size:0.95rem;">
+                  <input type="radio" name="contact_type" value="Request a Yard Sign" required style="width:18px;height:18px;cursor:pointer;accent-color:var(--gold);">
+                  Request a Yard Sign
+                </label>
+                <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;color:var(--cream);font-size:0.95rem;">
+                  <input type="radio" name="contact_type" value="Volunteer" required style="width:18px;height:18px;cursor:pointer;accent-color:var(--gold);">
+                  Volunteer
+                </label>
+              </div>
+            </fieldset>
 
-        <fieldset style="border:none;padding:0;margin-bottom:1rem;">
-          <legend style="font-family:'Bebas Neue',sans-serif;font-size:0.9rem;letter-spacing:2px;color:var(--cream);margin-bottom:0.75rem;text-transform:uppercase;"> How can we Help?</legend>
-          <div style="display:flex;flex-direction:column;gap:0.75rem;">
-            <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;color:var(--cream);font-size:0.95rem;">
-              <input type="radio" name="contact_type" value="Share Support / Express Concerns" required style="width:18px;height:18px;cursor:pointer;accent-color:var(--gold);">
-              Share Support / Express Concerns
-            </label>
-            <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;color:var(--cream);font-size:0.95rem;">
-              <input type="radio" name="contact_type" value="Request a Yard Sign" required style="width:18px;height:18px;cursor:pointer;accent-color:var(--gold);">
-              Request a Yard Sign
-            </label>
-            <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;color:var(--cream);font-size:0.95rem;">
-              <input type="radio" name="contact_type" value="Volunteer" required style="width:18px;height:18px;cursor:pointer;accent-color:var(--gold);">
-              Volunteer
-            </label>
-          </div>
-        </fieldset>
+            <div id="yard-sign-container" style="display:none;">
+              <fieldset style="border:none;padding:0;margin-bottom:1rem;">
+                <legend style="font-family:'Bebas Neue',sans-serif;font-size:0.9rem;letter-spacing:2px;color:var(--cream);margin-bottom:0.75rem;text-transform:uppercase;">Yard Sign Size</legend>
+                <div style="display:flex;flex-direction:column;gap:0.75rem;">
+                  <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;color:var(--cream);font-size:0.95rem;">
+                    <input type="radio" name="yard_sign_size" value="18x24" style="width:18px;height:18px;cursor:pointer;accent-color:var(--gold);">
+                    18&quot; x 24&quot; Standard
+                  </label>
+                  <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;color:var(--cream);font-size:0.95rem;">
+                    <input type="radio" name="yard_sign_size" value="24x36" style="width:18px;height:18px;cursor:pointer;accent-color:var(--gold);">
+                    24&quot; x 36&quot; Large
+                  </label>
+                  <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;color:var(--cream);font-size:0.95rem;">
+                    <input type="radio" name="yard_sign_size" value="4x8" style="width:18px;height:18px;cursor:pointer;accent-color:var(--gold);">
+                    4&quot; x 8&quot; Bumper Sticker
+                  </label>
+                </div>
+              </fieldset>
 
-        <div id="yard-sign-container" style="display:none;">
-          <fieldset style="border:none;padding:0;margin-bottom:1rem;">
-            <legend style="font-family:'Bebas Neue',sans-serif;font-size:0.9rem;letter-spacing:2px;color:var(--cream);margin-bottom:0.75rem;text-transform:uppercase;">Yard Sign Size</legend>
-            <div style="display:flex;flex-direction:column;gap:0.75rem;">
-              <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;color:var(--cream);font-size:0.95rem;">
-                <input type="radio" name="yard_sign_size" value="18x24" style="width:18px;height:18px;cursor:pointer;accent-color:var(--gold);">
-                18&quot; x 24&quot; Standard
-              </label>
-              <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;color:var(--cream);font-size:0.95rem;">
-                <input type="radio" name="yard_sign_size" value="24x36" style="width:18px;height:18px;cursor:pointer;accent-color:var(--gold);">
-                24&quot; x 36&quot; Large
-              </label>
-              <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;color:var(--cream);font-size:0.95rem;">
-                <input type="radio" name="yard_sign_size" value="4x8" style="width:18px;height:18px;cursor:pointer;accent-color:var(--gold);">
-                4&quot; x 8&quot; Bumper Sticker
-              </label>
+              <fieldset style="border:none;padding:0;margin-bottom:1rem;">
+                <legend style="font-family:'Bebas Neue',sans-serif;font-size:0.9rem;letter-spacing:2px;color:var(--cream);margin-bottom:0.75rem;text-transform:uppercase;">Location Type</legend>
+                <div style="display:flex;flex-direction:column;gap:0.75rem;">
+                  <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;color:var(--cream);font-size:0.95rem;">
+                    <input type="radio" name="location_type" value="Home Residence" style="width:18px;height:18px;cursor:pointer;accent-color:var(--gold);">
+                    Home Residence
+                  </label>
+                  <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;color:var(--cream);font-size:0.95rem;">
+                    <input type="radio" name="location_type" value="Business" style="width:18px;height:18px;cursor:pointer;accent-color:var(--gold);">
+                    Business
+                  </label>
+                </div>
+              </fieldset>
+
+              <input type="text" name="yard_sign_address" class="form-input" placeholder="Street Address" aria-label="Street address" style="margin-bottom:1rem;">
+              <input type="text" name="yard_sign_city" class="form-input" placeholder="City" aria-label="City" style="margin-bottom:1rem;">
+              <div class="form-row">
+                <input type="text" name="yard_sign_state" class="form-input" placeholder="State" aria-label="State" style="flex:0.5;">
+                <input type="text" name="yard_sign_zip" class="form-input" placeholder="ZIP Code" aria-label="ZIP code" style="flex:0.5;">
+              </div>
             </div>
-          </fieldset>
 
-          <fieldset style="border:none;padding:0;margin-bottom:1rem;">
-            <legend style="font-family:'Bebas Neue',sans-serif;font-size:0.9rem;letter-spacing:2px;color:var(--cream);margin-bottom:0.75rem;text-transform:uppercase;">Location Type</legend>
-            <div style="display:flex;flex-direction:column;gap:0.75rem;">
-              <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;color:var(--cream);font-size:0.95rem;">
-                <input type="radio" name="location_type" value="Home Residence" style="width:18px;height:18px;cursor:pointer;accent-color:var(--gold);">
-                Home Residence
-              </label>
-              <label style="display:flex;align-items:center;gap:0.6rem;cursor:pointer;color:var(--cream);font-size:0.95rem;">
-                <input type="radio" name="location_type" value="Business" style="width:18px;height:18px;cursor:pointer;accent-color:var(--gold);">
-                Business
-              </label>
-            </div>
-          </fieldset>
-
-          <input type="text" name="yard_sign_address" class="form-input" placeholder="Street Address" aria-label="Street address" style="margin-bottom:1rem;">
-          <input type="text" name="yard_sign_city" class="form-input" placeholder="City" aria-label="City" style="margin-bottom:1rem;">
-          <div class="form-row">
-            <input type="text" name="yard_sign_state" class="form-input" placeholder="State" aria-label="State" style="flex:0.5;">
-            <input type="text" name="yard_sign_zip" class="form-input" placeholder="ZIP Code" aria-label="ZIP code" style="flex:0.5;">
-          </div>
+            <textarea name="message" class="form-input" placeholder="Message (optional)" aria-label="Message" style="margin-bottom:1rem;min-height:100px;resize:vertical;"></textarea>
+            <button type="submit" class="form-btn">Submit</button>
+          </form>
         </div>
-
-        <textarea name="message" class="form-input" placeholder="Message (optional)" aria-label="Message" style="margin-bottom:1rem;min-height:100px;resize:vertical;"></textarea>
-        <button type="submit" class="form-btn">Submit</button>
-      </form>
+        <div style="display:flex;flex-direction:column;justify-content:center;">
+          <p style="color:var(--cream);font-size:1.05rem;line-height:1.8;">
+            <strong style="color:var(--gold);">Join the movement.</strong> Whether you want to express your support, request a yard sign to show your backing, or volunteer with the campaign, we want to hear from you. Your voice matters in building a safer Beaufort County.
+          </p>
+        </div>
+      </div>
     </div>
-    <div style="display:flex;flex-direction:column;justify-content:center;">
-      <p style="color:var(--cream);font-size:1.05rem;line-height:1.8;">
-        <strong style="color:var(--gold);">Join the movement.</strong> Whether you want to express your support, request a yard sign to show your backing, or volunteer with the campaign, we want to hear from you. Your voice matters in building a safer Beaufort County.
-      </p>
-    </div>
-  </div>
-</section>
-
+  </section>
 
 </main>
 
@@ -683,10 +717,6 @@
 
 <script>
   // ===== TESTIMONIALS DATA STRUCTURE =====
-  // Production-ready data object for easy extension
-  // Add new testimonials by adding objects to this array
-  // Fields: id (unique), name, title, quote, excerpt, imageSrc, articleLink (optional)
-  
   const testimonialsData = [
     {
       id: 'sheriff-tanner',
@@ -697,81 +727,9 @@
       imageSrc: 'https://paymegpt.com/objects/quick-uploads/2/78fe3d764bcaa206.png',
       articleLink: 'https://amp.islandpacket.com/news/local/crime/article315210908.html'
     }
-    // To add more testimonials, use this template:
-    // {
-    //   id: 'unique-id',
-    //   name: 'Person Name',
-    //   title: 'Position/Title',
-    //   quote: 'Their quote about Doug',
-    //   excerpt: 'Brief summary or description',
-    //   imageSrc: 'https://image-url.png',
-    //   articleLink: 'https://optional-link.html'
-    // }
   ];
 
-  // ===== DOWNLOAD PAGE AS HTML FILE =====
-  // Function: Downloads the entire page as a standalone HTML file
-  function downloadPageAsHTML() {
-    const htmlContent = document.documentElement.outerHTML;
-    const blob = new Blob([htmlContent], { type: 'text/html' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'seifert-for-sheriff.html';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
-  }
-
-  // ===== ADD DOWNLOAD BUTTON =====
-  document.addEventListener('DOMContentLoaded', function() {
-    const downloadBtn = document.createElement('button');
-    downloadBtn.id = 'download-page-btn';
-    downloadBtn.setAttribute('aria-label', 'Download page as HTML file');
-    downloadBtn.innerHTML = '<i class="fa-solid fa-download" style="margin-right: 0.5rem;"></i>Download';
-    downloadBtn.style.cssText = `
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      background: var(--gold);
-      color: var(--navy);
-      border: none;
-      padding: 0.75rem 1.5rem;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 0.9rem;
-      letter-spacing: 2px;
-      cursor: pointer;
-      border-radius: 4px;
-      box-shadow: 0 4px 12px rgba(201, 168, 76, 0.3);
-      transition: all 0.3s ease;
-      z-index: 50;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    `;
-    
-    downloadBtn.addEventListener('mouseenter', function() {
-      this.style.transform = 'translateY(-2px)';
-      this.style.boxShadow = '0 6px 16px rgba(201, 168, 76, 0.4)';
-    });
-    
-    downloadBtn.addEventListener('mouseleave', function() {
-      this.style.transform = 'translateY(0)';
-      this.style.boxShadow = '0 4px 12px rgba(201, 168, 76, 0.3)';
-    });
-    
-    downloadBtn.addEventListener('click', downloadPageAsHTML);
-    document.body.appendChild(downloadBtn);
-
-    if (window.innerWidth < 768) {
-      downloadBtn.style.display = 'none';
-    }
-  });
-
   // ===== RENDER TESTIMONIALS SECTION =====
-  // Function: Dynamically generates testimonial cards from data
-  // Purpose: Eliminates redundancy, makes testimonials easy to update
   function renderTestimonials() {
     const container = document.getElementById('testimonials-container');
     
@@ -797,7 +755,7 @@
       const metaHTML = `
         <div class="testimonial-meta">
           ${testimonial.excerpt}
-          ${testimonial.articleLink ? `<br><a href="${testimonial.articleLink}" target="_blank" rel="noopener noreferrer" style="color: var(--gold); text-decoration: none; margin-top: 0.5rem; display: inline-block;">Read More →</a>` : ''}
+          ${testimonial.articleLink ? `<br><a href="${testimonial.articleLink}" target="_blank" rel="noopener noreferrer" style="color: var(--gold); text-decoration: none; margin-top: 0.5rem; display: inline-block;">Read More &rarr;</a>` : ''}
         </div>
       `;
       
@@ -805,7 +763,6 @@
       container.appendChild(card);
     });
 
-    // Observe new testimonial cards for scroll animation
     document.querySelectorAll('.testimonial-card').forEach(el => observer.observe(el));
   }
 

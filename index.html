@@ -170,6 +170,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://secure.anedot.com">
+<link rel="preconnect" href="https://secure.anedot.com" crossorigin>
 <link rel="dns-prefetch" href="https://www.facebook.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=Bebas+Neue&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3H7biwRVBojMY84S7ORRXn+kJw3freP3rWbznwmFQ7+CyQda58gJzILjEDutZ5m7UhuGHG8+0zEQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -585,12 +586,12 @@
             <span>Secure Donation Form &mdash; Powered by Anedot</span>
           </div>
           <iframe
-            src="https://secure.anedot.com/seifert-for-seifert/24c59e80-2cfd-4847-8447-e76eae258994?embed=true&webhook=1897&flow_webhook=1897"
+            data-src="https://secure.anedot.com/seifert-for-seifert/24c59e80-2cfd-4847-8447-e76eae258994?embed=true&webhook=1897&flow_webhook=1897"
             width="100%"
             height="680"
             frameborder="0"
             title="Donate to the Seifert for Sheriff Campaign"
-            loading="lazy"
+            importance="high"
             scrolling="no"
             data-webhook-id="1897"
             data-flow-webhook-id="1897"
@@ -853,6 +854,27 @@
       submitBtn.textContent = 'Submit';
     });
   });
+
+  // ===== DEFERRED DONATE IFRAME LOADING =====
+  // Injects the Anedot src only when the donate section is ~200px from viewport
+  // Keeps Anedot's third-party resources off the critical path on page load
+  const donateSection = document.getElementById('donate');
+  if (donateSection) {
+    const donateObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const iframe = donateSection.querySelector('iframe[data-src]');
+          if (iframe && !iframe.src) {
+            iframe.src = iframe.dataset.src;
+          }
+          donateObserver.unobserve(e.target);
+        }
+      });
+    }, { rootMargin: '200px' });
+
+    donateObserver.observe(donateSection);
+  }
+
 </script>
 
 </body>

@@ -1,23 +1,13 @@
-// Scroll reveal
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('visible');
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-  // Form handlers
-  function handleSignup(btn) {
-    btn.textContent = '\u2713 You\u2019re In!';
-    btn.style.background = 'var(--gold)';
-    btn.style.color = 'var(--navy)';
-    btn.style.borderColor = 'var(--gold)';
-    btn.disabled = true;
-  }
-  function handleVolunteer(btn) {
-    btn.textContent = '\u2713 Request Received!';
-    btn.style.background = 'var(--gold)';
-    btn.style.color = 'var(--navy)';
-    btn.style.borderColor = 'var(--gold)';
-    btn.disabled = true;
-  }
+const testimonialsData=[{name:'Sheriff P.J. Tanner',title:'Beaufort County Sheriff (Retiring)',quote:"No one can out-work him. You don't find that in everyone today.",excerpt:'Doug Seifert has spent 20 years serving Beaufort County and now has the full endorsement of Sheriff Tanner to lead next.',imageSrc:'https://paymegpt.com/objects/quick-uploads/2/78fe3d764bcaa206.png',articleLink:'https://amp.islandpacket.com/news/local/crime/article315210908.html'},{name:'Chief Alexander',title:'Yemassee Police Department',quote:"Doug's leadership and vision for the future of law enforcement in this region is exactly what we need.",excerpt:"Chief Alexander welcomed Doug Seifert for a tour of Yemassee's future police department.",imageSrc:'https://i.ibb.co/6RY9jX2z/Chief-Alexander.jpg',articleLink:null}];
+function renderTestimonials(){const c=document.getElementById('testimonials-container');if(!c)return;testimonialsData.forEach(t=>{const d=document.createElement('div');d.className='testimonial-card fade-up';d.innerHTML=`<div class="testimonial-header"><img src="${t.imageSrc}" alt="${t.name}" class="testimonial-avatar" loading="lazy"><div class="testimonial-author-info"><h3>${t.name}</h3><div class="testimonial-author-title">${t.title}</div></div></div><div class="testimonial-quote">${t.quote}</div><div class="testimonial-meta">${t.excerpt}${t.articleLink?`<br><a href="${t.articleLink}" target="_blank" rel="noopener noreferrer" style="color:var(--gold);text-decoration:none;margin-top:0.5rem;display:inline-block;">Read More &rarr;</a>`:''}</div>`;c.appendChild(d);observer.observe(d);});}
+const observer=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:.1});
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+document.querySelectorAll('.issue-trigger').forEach(btn=>{btn.addEventListener('click',()=>{const iss=btn.closest('.issue');const exp=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',String(!exp));iss.classList.toggle('open');const h=btn.querySelector('.issue-hint');if(h)h.textContent=iss.classList.contains('open')?'Tap to Collapse':'Tap to Expand';});});
+document.querySelectorAll('.hero-pillar').forEach(pill=>{pill.addEventListener('click',function(e){const href=this.getAttribute('href');if(!href||!href.startsWith('#'))return;const target=document.querySelector(href);if(!target)return;e.preventDefault();if(target.classList.contains('issue')&&!target.classList.contains('open')){target.classList.add('open');const btn=target.querySelector('.issue-trigger');if(btn)btn.setAttribute('aria-expanded','true');const hint=target.querySelector('.issue-hint');if(hint)hint.textContent='Tap to Collapse';}setTimeout(()=>{target.scrollIntoView({behavior:'smooth',block:'start'});},120);});});
+const ED=new Date('2026-06-09T07:00:00-04:00');
+function uc(){const n=new Date(),d=ED-n;if(d<=0){['cd-days','cd-hours','cd-minutes','cd-seconds'].forEach(i=>{const e=document.getElementById(i);if(e)e.textContent='0';});const s=document.getElementById('stat-days');if(s)s.textContent='0';const b=document.getElementById('banner-countdown');if(b)b.textContent='TODAY';return;}const ds=Math.floor(d/86400000),h=Math.floor(d/3600000%24),m=Math.floor(d/60000%60),sc=Math.floor(d/1000%60);document.getElementById('cd-days').textContent=ds;document.getElementById('cd-hours').textContent=String(h).padStart(2,'0');document.getElementById('cd-minutes').textContent=String(m).padStart(2,'0');document.getElementById('cd-seconds').textContent=String(sc).padStart(2,'0');const sd=document.getElementById('stat-days');if(sd)sd.textContent=ds;const b=document.getElementById('banner-countdown');if(b){if(ds>1)b.textContent=`${ds} Days to June 9`;else if(ds===1)b.textContent='1 Day to June 9';else b.textContent='Election Day';}}
+uc();setInterval(uc,1000);
+var form=document.getElementById('campaign-contact-form');
+if(form){form.addEventListener('submit',function(){var sb=form.querySelector('button[type="submit"]');if(sb){sb.disabled=true;sb.textContent='Submitting...';}var ok=document.getElementById('form-success');if(ok){setTimeout(function(){ok.classList.add('show');form.reset();if(sb){sb.disabled=false;sb.textContent='Submit';}},400);}});}
+const ds=document.getElementById('donate');if(ds){const o=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){const i=ds.querySelector('iframe[data-src]');if(i&&!i.src)i.src=i.dataset.src;o.unobserve(x.target);}});},{rootMargin:'200px'});o.observe(ds);}
+document.addEventListener('DOMContentLoaded',renderTestimonials);

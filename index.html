@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,7 +9,7 @@
 <meta name="author" content="Doug Seifert for Sheriff Campaign">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <link rel="canonical" href="https://seifertforsheriff.com/">
-<meta name="theme-color" content="#0a1628">
+<meta name="theme-color" content="#0d0d0d">
 
 <meta property="og:url" content="https://seifertforsheriff.com/">
 
@@ -248,7 +249,11 @@
 </main>
 <footer role="contentinfo"><div class="section-inner"><p><em>PAID BY THE COMMITTEE TO ELECT SEIFERT SHERIFF</em><br><br>&copy; 2025 All rights reserved.</p></div></footer>
 <script>
-const testimonialsData=[{name:'Sheriff P.J. Tanner',title:'Beaufort County Sheriff (Retiring)',quote:"No one can out-work him. You don't find that in everyone today.",excerpt:'Doug Seifert has spent 20 years serving Beaufort County and now has the full endorsement of Sheriff Tanner to lead next.',imageSrc:'https://paymegpt.com/objects/quick-uploads/2/78fe3d764bcaa206.png',articleLink:'https://amp.islandpacket.com/news/local/crime/article315210908.html'},{name:'Chief Alexander',title:'Yemassee Police Department',quote:"Doug's leadership and vision for the future of law enforcement in this region is exactly what we need.",excerpt:"Chief Alexander welcomed Doug Seifert for a tour of Yemassee's future police department.",imageSrc:'https://i.ibb.co/6RY9jX2z/Chief-Alexander.jpg',articleLink:null}];
+const testimonialsData=[
+  {name:'Sheriff P.J. Tanner',title:'Beaufort County Sheriff (Retiring)',quote:"No one can out-work him. You don't find that in everyone today.",excerpt:'Doug Seifert has spent 20 years serving Beaufort County and now has the full endorsement of Sheriff Tanner to lead next.',imageSrc:'https://paymegpt.com/objects/quick-uploads/2/78fe3d764bcaa206.png',articleLink:'https://amp.islandpacket.com/news/local/crime/article315210908.html'},
+  {name:'Chief Alexander',title:'Yemassee Police Department',quote:"Doug's leadership and vision for the future of law enforcement in this region is exactly what we need.",excerpt:"Chief Alexander welcomed Doug Seifert for a tour of Yemassee's future police department.",imageSrc:'https://i.ibb.co/6RY9jX2z/Chief-Alexander.jpg',articleLink:null},
+  {name:'Galen Miller',title:'Community Leader &middot; 6-Year Colleague',quote:"I am proud to support Doug Seifert for Beaufort County Sheriff. He has my vote!",excerpt:"Over the past six years, I have had the pleasure of working with Doug and witnessing his dedication firsthand, from coordinating MLK parade route logistics to supporting numerous community events. Most recently, I worked alongside Doug during our MLK Children's Fun Day, where we cooked hamburgers and hot dogs for more than 150 children and their families. Throughout these experiences, Doug has consistently demonstrated professionalism, reliability, and a deep commitment to the people of Beaufort County.<br><br>Doug and I share many mutual connections, including friends, family members, and colleagues, which has only strengthened my respect for his character. With more than 20 years of living and working in Beaufort County, he brings both experience and a genuine understanding of the community he serves.<br><br>Beyond his professional contributions, Doug is a loving husband and father. He's devoted and supportive, and he's a wonderful role model.",imageSrc:'https://paymegpt.com/objects/quick-uploads/2/0a7370eb8aae34a3.jpg',articleLink:null}
+];
 function renderTestimonials(){const c=document.getElementById('testimonials-container');if(!c)return;testimonialsData.forEach(t=>{const d=document.createElement('div');d.className='testimonial-card fade-up';d.innerHTML=`<div class="testimonial-header"><img src="${t.imageSrc}" alt="${t.name}" class="testimonial-avatar" loading="lazy"><div class="testimonial-author-info"><h3>${t.name}</h3><div class="testimonial-author-title">${t.title}</div></div></div><div class="testimonial-quote">${t.quote}</div><div class="testimonial-meta">${t.excerpt}${t.articleLink?`<br><a href="${t.articleLink}" target="_blank" rel="noopener noreferrer" style="color:var(--gold);text-decoration:none;margin-top:0.5rem;display:inline-block;">Read More &rarr;</a>`:''}</div>`;c.appendChild(d);observer.observe(d);});}
 const observer=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:.1});
 document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));

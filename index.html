@@ -34,23 +34,11 @@
 <meta name="twitter:title" content="Elect Doug Seifert: Leadership for Beaufort County" />
 <meta name="twitter:description" content="Join the movement to elect Doug Seifert for Sheriff. Experience the difference of dedicated community leadership and proven public safety expertise." />
 <meta name="twitter:image" content="https://paymegpt.com/api/landing-pages/images/landing-page-images%2F0%2F1773931157728_blob.jpeg" />
-<link rel="icon" href="favicon.png" />
-<link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="favicon.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="favicon.png" />
+<link rel="icon" href="https://paymegpt.com/api/landing-pages/images/landing-page-images%2F0%2F1773931117036_blob.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://paymegpt.com/api/landing-pages/images/landing-page-images%2F0%2F1773931117036_blob.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="https://paymegpt.com/api/landing-pages/images/landing-page-images%2F0%2F1773931117036_blob.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="https://paymegpt.com/api/landing-pages/images/landing-page-images%2F0%2F1773931117036_blob.png" />
 <!-- End SEO Meta Tags -->
-
-
-<!-- TRACKING:HEAD START (managed by Coding Agent — do not edit) -->
-<!-- Google Analytics (GA4) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9BPG2PN2BQ"></script>
-
-
-<!-- Custom Head HTML -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9BPG2PN2BQ"></script>
-
-<!-- TRACKING:HEAD END -->
 
 <script data-field-replace>
 (function(){
@@ -180,6 +168,7 @@
 (function(){
   var slug='q3mMyV';
   var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
   function findEmail(){
     var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
     for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
@@ -224,8 +213,12 @@
       var pName=urlParams.get('product')||'your item';
       var overlay=document.createElement('div');overlay.id='payment-success-overlay';
       overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
-      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">Thank you for purchasing '+pName.replace(/</g,'&lt;').replace(/>/g,'&gt;')+'.</p><button onclick="document.getElementById(\'payment-success-overlay\').remove();window.history.replaceState({},\'\',window.location.pathname);" style="padding:12px 32px;font-size:16px;font-weight:600;background:#16a34a;color:white;border:none;border-radius:8px;cursor:pointer;">Continue</button></div>';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
       document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
     }
   });
 })();
@@ -406,6 +399,16 @@
 </div>
 </div>
 
+<div class="video-testimonial-card fade-up">
+<div class="video-testimonial-embed"><iframe src="https://www.youtube-nocookie.com/embed/q9W-t1Pf84g?rel=0&amp;modestbranding=1&amp;playsinline=1" title="Taylor Brown Endorses Doug Seifert" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+<div class="video-testimonial-body">
+<span class="video-testimonial-badge"><i class="fa-solid fa-circle-play"></i> Video Endorsement</span>
+<h3 class="video-testimonial-name">Taylor Brown</h3>
+<div class="video-testimonial-role">Community Resident, Old Town Bluffton, SC</div>
+<p class="video-testimonial-blurb"><strong>I Feel Safer Here</strong><br>When I moved here as a single woman, I could walk the beach at night and not have to worry. Bluffton and Beaufort County have so much to offer from a safety standpoint. I'm looking for a sheriff who values integrity, honesty, and puts the community first, and above all will always do the right thing. I believe Doug Seifert is the right candidate and the right man for the job.</p>
+</div>
+</div>
+
 </div>
 
 <div class="written-testimonials-header fade-up">
@@ -481,6 +484,5 @@ if(hamburger&&mobileDrawer){
   });
 }
 </script>
-  <script src="script.js"></script>
 </body>
 </html>

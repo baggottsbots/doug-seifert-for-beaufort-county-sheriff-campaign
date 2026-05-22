@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<meta name="author" content="Doug Seifert for Sheriff Campaign">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://seifertforsheriff.com/endorsements/">
+<meta name="theme-color" content="#0d0d0d">
+
+<meta property="og:url" content="https://seifertforsheriff.com/endorsements/">
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+
+<!-- SEO Meta Tags -->
+<title>Endorsements | Doug Seifert for Beaufort County Sheriff 2026</title>
+<meta name="description" content="See who is endorsing Doug Seifert for Beaufort County Sheriff. Retired law enforcement, business owners, and community leaders across Beaufort County are standing with Doug. Vote June 9." />
+<meta property="og:title" content="Endorsements | Doug Seifert for Beaufort County Sheriff 2026" />
+<meta property="og:description" content="See who is endorsing Doug Seifert for Beaufort County Sheriff. Retired law enforcement, business owners, and community leaders across Beaufort County are standing with Doug. Vote June 9." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Endorsements | Doug Seifert for Beaufort County Sheriff 2026" />
+<meta name="twitter:description" content="See who is endorsing Doug Seifert for Beaufort County Sheriff. Retired law enforcement, business owners, and community leaders across Beaufort County are standing with Doug. Vote June 9." />
+<!-- End SEO Meta Tags -->
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=4221');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='kJHv5bXEfq';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="vote-banner" role="banner"><i class="fa-solid fa-vote-yea" aria-hidden="true" style="margin-right:.4rem;"></i> Republican Primary <span class="vote-banner-countdown" id="banner-countdown">June 9</span> <a href="https://paymegpt.com/p/q3mMyV#vote">Make a Plan to Vote &rarr;</a></div>
+<nav aria-label="Main navigation"><a href="https://paymegpt.com/p/q3mMyV" class="nav-logo">Seifert for Sheriff</a><ul class="nav-links"><li><a href="https://paymegpt.com/p/q3mMyV#about">About</a></li><li><a href="https://paymegpt.com/p/q3mMyV#plan">The Plan</a></li><li><a href="https://paymegpt.com/p/q3mMyV#events">Events</a></li><li><a href="#" class="active">Endorsements</a></li><li><a href="https://paymegpt.com/p/q3mMyV#donate">Donate</a></li><li><a href="https://paymegpt.com/p/q3mMyV#connect">Connect</a></li><li><a href="https://paymegpt.com/p/q3mMyV#vote" class="nav-vote-btn">Vote June 9</a></li></ul><button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button></nav>
+<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true"><a href="https://paymegpt.com/p/q3mMyV#about">About</a><a href="https://paymegpt.com/p/q3mMyV#plan">The Plan</a><a href="https://paymegpt.com/p/q3mMyV#events">Events</a><a href="#">Endorsements</a><a href="https://paymegpt.com/p/q3mMyV#donate">Donate</a><a href="https://paymegpt.com/p/q3mMyV#connect">Connect</a><a href="https://paymegpt.com/p/q3mMyV#vote" class="mob-vote-btn">Vote June 9</a></div>
+<main id="main-content">
+
+<header class="page-hero">
+<div class="page-hero-inner">
+<span class="palm"><i class="fa-solid fa-tree-palm" aria-hidden="true"></i></span>
+<div class="page-hero-badge">Republican Primary &middot; June 9, 2026</div>
+<h1>Beaufort County<span>Stands With Doug</span></h1>
+<div class="page-hero-sub">Endorsements &amp; Testimonials</div>
+<p>Retired law enforcement, small business owners, and community leaders from across Beaufort County are speaking out for Doug Seifert. Hear them in their own words.</p>
+<div class="divider"></div>
+</div>
+</header>
+
+<div class="endorse-count-bar">
+<div class="endorse-count-item"><div class="endorse-count-num">6</div><div class="endorse-count-label">Video Endorsements</div></div>
+<div class="endorse-count-item"><div class="endorse-count-num">3</div><div class="endorse-count-label">Written Endorsements</div></div>
+<div class="endorse-count-item"><div class="endorse-count-num">20</div><div class="endorse-count-label">Years Serving BCSO</div></div>
+<div class="endorse-count-item"><div class="endorse-count-num" id="count-days">--</div><div class="endorse-count-label">Days Until Primary</div></div>
+</div>
+
+<section class="endorse-block">
+<div class="section-inner">
+<div class="endorse-header fade-up">
+<div class="section-label">In Their Own Words</div>
+<h2 class="section-title">Video Endorsements</h2>
+<div class="divider"></div>
+<p>Real Beaufort County residents and leaders explaining, on camera, why they are standing with Doug Seifert for Sheriff.</p>
+</div>
+<div class="video-testimonials-grid">
+
+<div class="video-testimonial-card fade-up">
+<div class="video-testimonial-embed"><iframe src="https://www.youtube-nocookie.com/embed/PjkzBc7ScOQ?rel=0&amp;modestbranding=1&amp;playsinline=1" title="David Burke of Burke's Pharmacy Endorses Doug Seifert" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+<div class="video-testimonial-body">
+<span class="video-testimonial-badge"><i class="fa-solid fa-circle-play"></i> Video Endorsement</span>
+<h3 class="video-testimonial-name">David Burke</h3>
+<div class="video-testimonial-role">Owner, Burke&rsquo;s Pharmacy</div>
+<p class="video-testimonial-blurb">David Burke, owner of Burke&rsquo;s Pharmacy, shares why he is endorsing Doug Seifert for Beaufort County Sheriff. David talks about Doug&rsquo;s leadership, integrity, experience, and commitment to bringing common sense back to the Sheriff&rsquo;s Office.</p>
+</div>
+</div>
+
+<div class="video-testimonial-card fade-up">
+<div class="video-testimonial-embed"><iframe src="https://www.youtube-nocookie.com/embed/uzfHyBMQDUc?rel=0&amp;modestbranding=1&amp;playsinline=1" title="Nish Endorses Doug Seifert" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+<div class="video-testimonial-body">
+<span class="video-testimonial-badge"><i class="fa-solid fa-circle-play"></i> Video Endorsement</span>
+<h3 class="video-testimonial-name">Nish</h3>
+<div class="video-testimonial-role">Beaufort Business Owner &middot; Community Hero</div>
+<p class="video-testimonial-blurb">A local Beaufort business owner and community hero shares why Doug Seifert is the right choice to lead the Beaufort County Sheriff&rsquo;s Office.</p>
+</div>
+</div>
+
+<div class="video-testimonial-card fade-up">
+<div class="video-testimonial-embed"><iframe src="https://www.youtube-nocookie.com/embed/i7jOTwZfnK4?rel=0&amp;modestbranding=1&amp;playsinline=1" title="Retired Lt. Eric Calendine Endorses Doug Seifert" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+<div class="video-testimonial-body">
+<span class="video-testimonial-badge"><i class="fa-solid fa-circle-play"></i> Video Endorsement</span>
+<h3 class="video-testimonial-name">Retired Lt. Eric Calendine</h3>
+<div class="video-testimonial-role">Retired Law Enforcement Lieutenant</div>
+<p class="video-testimonial-blurb">A retired Lieutenant who knows the work firsthand explains why Doug has earned his endorsement to lead the next era of public safety in Beaufort County.</p>
+</div>
+</div>
+
+<div class="video-testimonial-card fade-up">
+<div class="video-testimonial-embed"><iframe src="https://www.youtube-nocookie.com/embed/qvq822nCYt4?rel=0&amp;modestbranding=1&amp;playsinline=1" title="John Juarez of Riptide Martial Arts Endorses Doug Seifert" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+<div class="video-testimonial-body">
+<span class="video-testimonial-badge"><i class="fa-solid fa-circle-play"></i> Video Endorsement</span>
+<h3 class="video-testimonial-name">John Juarez</h3>
+<div class="video-testimonial-role">Owner, Riptide Martial Arts</div>
+<p class="video-testimonial-blurb">The owner of Riptide Martial Arts shares why Doug&rsquo;s leadership, discipline, and community focus make him the right choice for Beaufort County Sheriff.</p>
+</div>
+</div>
+
+<div class="video-testimonial-card fade-up">
+<div class="video-testimonial-embed"><iframe src="https://www.youtube-nocookie.com/embed/wukqSjvaIWY?rel=0&amp;modestbranding=1&amp;playsinline=1" title="Deborah A. Youmans Endorses Doug Seifert" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+<div class="video-testimonial-body">
+<span class="video-testimonial-badge"><i class="fa-solid fa-circle-play"></i> Video Endorsement</span>
+<h3 class="video-testimonial-name">Deborah A. Youmans</h3>
+<div class="video-testimonial-role">Beaufort County Community Leader</div>
+<p class="video-testimonial-blurb">A respected community leader speaks to Doug&rsquo;s character, his connection to Beaufort County, and why she is standing with him on June 9.</p>
+</div>
+</div>
+
+<div class="video-testimonial-card fade-up">
+<div class="video-testimonial-embed"><iframe src="https://www.youtube-nocookie.com/embed/q9W-t1Pf84g?rel=0&amp;modestbranding=1&amp;playsinline=1" title="Taylor Brown Endorses Doug Seifert" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+<div class="video-testimonial-body">
+<span class="video-testimonial-badge"><i class="fa-solid fa-circle-play"></i> Video Endorsement</span>
+<h3 class="video-testimonial-name">Taylor Brown</h3>
+<div class="video-testimonial-role">Community Resident, Old Town Bluffton, SC</div>
+<p class="video-testimonial-blurb">A Bluffton resident shares why she feels safer in Beaufort County, and why she is looking for a sheriff who values integrity, honesty, and putting the community first. She believes Doug Seifert is the right man for the job.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="endorse-block alt">
+<div class="section-inner">
+<div class="endorse-header fade-up">
+<div class="section-label">More Voices</div>
+<h2 class="section-title">Written Endorsements</h2>
+<div class="divider"></div>
+<p>Endorsements from across Beaufort County, from retired leadership to neighbors who have worked alongside Doug for years.</p>
+</div>
+<div class="testimonials-grid" id="testimonials-container"></div>
+</div>
+</section>
+
+<section class="feature-story">
+<div class="feature-story-inner">
+<div class="feature-story-text fade-up">
+<div class="section-label">Real Stories &middot; Community Impact</div>
+<h2 class="feature-story-title">Leadership That Changes Lives</h2>
+<div class="divider" style="margin-bottom:1.5rem;"></div>
+<div style="display:flex;align-items:flex-start;gap:1.5rem;margin-bottom:1.5rem;">
+<img src="https://i.ibb.co/rRDBbjnL/Screenshot-2026-04-09-at-10-32-40-PM.png" alt="Krista Flanders" style="width:100px;height:120px;border-radius:8px;object-fit:cover;flex-shrink:0;border:2px solid rgba(201,168,76,0.3);">
+<div>
+<div style="font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--white);margin-bottom:0.3rem;">Krista Flanders</div>
+<div style="font-family:'Bebas Neue',sans-serif;font-size:0.75rem;letter-spacing:2px;color:var(--gold);text-transform:uppercase;">10+ Years Sober &middot; Community Advocate</div>
+</div>
+</div>
+<p>Krista was facing 20 years in prison and battling alcohol addiction when she met Doug Seifert. Today, she is celebrating over a decade of sobriety, and credits Doug&rsquo;s compassion and leadership for helping change her life.</p>
+<p>This is not politics. It is real people, real change, and real leadership.</p>
+</div>
+<div class="fade-up">
+<div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/XXSyi0Ck310?rel=0&amp;modestbranding=1&amp;playsinline=1" title="Krista Flanders testimonial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+</div>
+</div>
+</section>
+
+<section class="endorse-cta">
+<div class="endorse-cta-inner">
+<div class="section-label">Add Your Voice</div>
+<h2>Stand With <span>Doug Seifert</span></h2>
+<p>Want to endorse Doug, request a yard sign, or volunteer with the campaign? Every message reaches the campaign directly. Then make your plan to vote on June 9.</p>
+<div class="endorse-cta-btns">
+<a href="https://paymegpt.com/p/q3mMyV#connect" class="btn-white">Endorse Doug</a>
+<a href="https://paymegpt.com/p/q3mMyV#vote" class="btn-white-outline">Make a Plan to Vote</a>
+</div>
+</div>
+</section>
+
+</main>
+<footer role="contentinfo">
+<div class="section-inner"><p><em>PAID BY THE COMMITTEE TO ELECT SEIFERT SHERIFF</em><br><br>&copy; 2026 All rights reserved. &middot; <a href="https://paymegpt.com/p/q3mMyV">Return to Home</a></p></div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

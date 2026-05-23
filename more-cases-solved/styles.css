@@ -43,6 +43,9 @@ section{padding:5.5rem 2rem}
 .section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.6vw,2.7rem);font-weight:700;line-height:1.15;margin-bottom:1rem;color:var(--white);text-align:center}
 .divider{width:60px;height:3px;background:var(--gold);margin:0 auto 1.6rem}
 .section-intro{max-width:660px;margin:0 auto 3rem;color:rgba(245,240,232,.78);font-size:1rem;line-height:1.8;font-weight:300;text-align:center}
+.video-section{background:var(--deep-navy);border-top:1px solid rgba(201,168,76,.15);border-bottom:1px solid rgba(201,168,76,.15)}
+.video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border:2px solid rgba(201,168,76,.3);box-shadow:0 20px 60px rgba(0,0,0,.6);max-width:900px;margin:0 auto}
+.video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;display:block}
 .chart-section{background:var(--navy)}
 .chart-card{background:rgba(255,255,255,.025);border:1px solid rgba(201,168,76,.22);border-top:3px solid var(--gold);padding:3rem 2.5rem 2.5rem;max-width:760px;margin:0 auto}
 .chart-card h3{font-family:'Playfair Display',serif;text-align:center;color:var(--white);font-size:1.3rem;font-weight:700;margin-bottom:.3rem}
@@ -55,6 +58,10 @@ section{padding:5.5rem 2rem}
 .chart-gain{text-align:center;margin-top:1.8rem;font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:3px;color:var(--red);font-size:1.15rem;text-transform:uppercase}
 .chart-gain i{color:var(--gold)}
 .source-note{text-align:center;margin-top:1.6rem;font-size:.8rem;color:var(--text-muted);font-style:italic;line-height:1.6}
+.circuit-section{background:var(--deep-navy);border-top:1px solid rgba(201,168,76,.15)}
+.circuit-figure{max-width:900px;margin:0 auto}
+.circuit-figure img{display:block;width:100%;height:auto;border:2px solid rgba(201,168,76,.3);box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.circuit-figure figcaption{margin-top:1.2rem;text-align:center;font-size:.85rem;font-style:italic;color:var(--text-muted);line-height:1.7;max-width:660px;margin-left:auto;margin-right:auto}
 .strip{background:var(--gold);text-align:center;padding:3rem 1.5rem}
 .strip .big{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,9vw,5.5rem);color:var(--navy);line-height:1}
 .strip .cap{font-family:'Bebas Neue',sans-serif;letter-spacing:2.5px;font-size:.92rem;margin-top:.4rem;color:rgba(10,10,10,.7);text-transform:uppercase}

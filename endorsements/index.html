@@ -191,9 +191,10 @@
     if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
     if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
     var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
     return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
       method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({email:email,name:customerName,amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+      body:JSON.stringify({email:email,name:customerName,amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
     }).then(function(r){return r.json();}).then(function(d){
       if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
       else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
@@ -236,7 +237,7 @@
 </header>
 
 <div class="endorse-count-bar">
-<div class="endorse-count-item"><div class="endorse-count-num">6</div><div class="endorse-count-label">Video Endorsements</div></div>
+<div class="endorse-count-item"><div class="endorse-count-num">7</div><div class="endorse-count-label">Video Endorsements</div></div>
 <div class="endorse-count-item"><div class="endorse-count-num">3</div><div class="endorse-count-label">Written Endorsements</div></div>
 <div class="endorse-count-item"><div class="endorse-count-num">20</div><div class="endorse-count-label">Years Serving BCSO</div></div>
 <div class="endorse-count-item"><div class="endorse-count-num" id="count-days">--</div><div class="endorse-count-label">Days Until Primary</div></div>
@@ -252,7 +253,17 @@
 </div>
 <div class="video-testimonials-grid">
 
-<div class="video-testimonial-card fade-up">
+<div class="video-testimonial-card fade-up" id="pj-tanner">
+<div class="video-testimonial-embed"><iframe src="https://www.youtube-nocookie.com/embed/zlPDcj0PTCg?rel=0&amp;modestbranding=1&amp;playsinline=1" title="Sheriff P.J. Tanner Endorses Doug Seifert for Beaufort County Sheriff" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+<div class="video-testimonial-body">
+<span class="video-testimonial-badge"><i class="fa-solid fa-circle-play"></i> Video Endorsement</span>
+<h3 class="video-testimonial-name">Sheriff P.J. Tanner</h3>
+<div class="video-testimonial-role">Beaufort County Sheriff (Retiring)</div>
+<p class="video-testimonial-blurb">After 46 years in law enforcement and 28 years as the elected Sheriff, P.J. Tanner explains why Doug Seifert is the one candidate with the character, discipline, and work ethic to lead the Beaufort County Sheriff&rsquo;s Office into the future.</p>
+</div>
+</div>
+
+<div class="video-testimonial-card fade-up" id="david-burke">
 <div class="video-testimonial-embed"><iframe src="https://www.youtube-nocookie.com/embed/PjkzBc7ScOQ?rel=0&amp;modestbranding=1&amp;playsinline=1" title="David Burke of Burke's Pharmacy Endorses Doug Seifert" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
 <div class="video-testimonial-body">
 <span class="video-testimonial-badge"><i class="fa-solid fa-circle-play"></i> Video Endorsement</span>
@@ -262,7 +273,7 @@
 </div>
 </div>
 
-<div class="video-testimonial-card fade-up">
+<div class="video-testimonial-card fade-up" id="nish">
 <div class="video-testimonial-embed"><iframe src="https://www.youtube-nocookie.com/embed/uzfHyBMQDUc?rel=0&amp;modestbranding=1&amp;playsinline=1" title="Nish Endorses Doug Seifert" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
 <div class="video-testimonial-body">
 <span class="video-testimonial-badge"><i class="fa-solid fa-circle-play"></i> Video Endorsement</span>
@@ -272,7 +283,7 @@
 </div>
 </div>
 
-<div class="video-testimonial-card fade-up">
+<div class="video-testimonial-card fade-up" id="eric-calendine">
 <div class="video-testimonial-embed"><iframe src="https://www.youtube-nocookie.com/embed/i7jOTwZfnK4?rel=0&amp;modestbranding=1&amp;playsinline=1" title="Retired Lt. Eric Calendine Endorses Doug Seifert" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
 <div class="video-testimonial-body">
 <span class="video-testimonial-badge"><i class="fa-solid fa-circle-play"></i> Video Endorsement</span>
@@ -282,7 +293,7 @@
 </div>
 </div>
 
-<div class="video-testimonial-card fade-up">
+<div class="video-testimonial-card fade-up" id="john-juarez">
 <div class="video-testimonial-embed"><iframe src="https://www.youtube-nocookie.com/embed/qvq822nCYt4?rel=0&amp;modestbranding=1&amp;playsinline=1" title="John Juarez of Riptide Martial Arts Endorses Doug Seifert" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
 <div class="video-testimonial-body">
 <span class="video-testimonial-badge"><i class="fa-solid fa-circle-play"></i> Video Endorsement</span>
@@ -292,7 +303,7 @@
 </div>
 </div>
 
-<div class="video-testimonial-card fade-up">
+<div class="video-testimonial-card fade-up" id="deborah-youmans">
 <div class="video-testimonial-embed"><iframe src="https://www.youtube-nocookie.com/embed/wukqSjvaIWY?rel=0&amp;modestbranding=1&amp;playsinline=1" title="Deborah A. Youmans Endorses Doug Seifert" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
 <div class="video-testimonial-body">
 <span class="video-testimonial-badge"><i class="fa-solid fa-circle-play"></i> Video Endorsement</span>
@@ -302,7 +313,7 @@
 </div>
 </div>
 
-<div class="video-testimonial-card fade-up">
+<div class="video-testimonial-card fade-up" id="taylor-brown">
 <div class="video-testimonial-embed"><iframe src="https://www.youtube-nocookie.com/embed/q9W-t1Pf84g?rel=0&amp;modestbranding=1&amp;playsinline=1" title="Taylor Brown Endorses Doug Seifert" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
 <div class="video-testimonial-body">
 <span class="video-testimonial-badge"><i class="fa-solid fa-circle-play"></i> Video Endorsement</span>

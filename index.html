@@ -198,9 +198,10 @@
     if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
     if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
     var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
     return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
       method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({email:email,name:customerName,amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+      body:JSON.stringify({email:email,name:customerName,amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
     }).then(function(r){return r.json();}).then(function(d){
       if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
       else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
@@ -348,6 +349,16 @@
 <section class="testimonials" data-section="testimonials" id="testimonials"><div class="section-inner"><div class="testimonials-header fade-up"><div class="section-label">Endorsements &amp; Testimonials</div><h2 class="section-title">Voices in Support of Doug</h2><div class="divider"></div><p>Real Beaufort County residents, business owners, retired law enforcement, and community leaders speaking out for Doug Seifert. Hear them in their own words.</p></div>
 
 <div class="video-testimonials-grid">
+
+<div class="video-testimonial-card fade-up">
+<div class="video-testimonial-embed"><iframe src="https://www.youtube-nocookie.com/embed/zlPDcj0PTCg?rel=0&amp;modestbranding=1&amp;playsinline=1" title="Sheriff P.J. Tanner Endorses Doug Seifert for Beaufort County Sheriff" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>
+<div class="video-testimonial-body">
+<span class="video-testimonial-badge"><i class="fa-solid fa-circle-play"></i> Video Endorsement</span>
+<h3 class="video-testimonial-name">Sheriff P.J. Tanner</h3>
+<div class="video-testimonial-role">Beaufort County Sheriff (Retiring)</div>
+<p class="video-testimonial-blurb">After 46 years in law enforcement and 28 years as the elected Sheriff, P.J. Tanner explains why Doug Seifert is the one candidate with the character, discipline, and work ethic to lead the Beaufort County Sheriff's Office into the future.</p>
+</div>
+</div>
 
 <div class="video-testimonial-card fade-up">
 <div class="video-testimonial-embed"><iframe src="https://www.youtube-nocookie.com/embed/PjkzBc7ScOQ?rel=0&amp;modestbranding=1&amp;playsinline=1" title="David Burke of Burke's Pharmacy Endorses Doug Seifert" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div>

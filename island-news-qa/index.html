@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<meta name="author" content="Doug Seifert for Sheriff Campaign">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://www.seifertsheriff.com/island-news-qa/">
+<meta name="theme-color" content="#0d0d0d">
+
+<meta property="og:url" content="https://www.seifertsheriff.com/island-news-qa/">
+
+
+
+<meta property="og:site_name" content="Seifert for Sheriff">
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "QAPage",
+  "mainEntity": {
+    "@type": "Question",
+    "name": "What do you believe is the single biggest public safety issue currently facing Beaufort County?",
+    "answerCount": 1,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The lack of infrastructure is creating the biggest public safety issue in Beaufort County, resulting in significant traffic congestion, more accidents, fatalities, and aggressive driving. Doug Seifert plans to dedicate Road Deputies solely to traffic enforcement and roadway incidents, creating a stronger traffic enforcement division while encouraging leaders to temporarily slow growth and build needed infrastructure."
+    }
+  },
+  "about": {
+    "@type": "Person",
+    "name": "Douglas Joseph Seifert",
+    "jobTitle": "Candidate for Beaufort County Sheriff"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+
+<!-- SEO Meta Tags -->
+<title>Doug Seifert Q&amp;amp;A with The Island News | Beaufort County Sheriff 2026</title>
+<meta name="description" content="Read Doug Seifert" />
+<meta property="og:title" content="Doug Seifert Q&amp;amp;A with The Island News | Beaufort County Sheriff 2026" />
+<meta property="og:description" content="Read Doug Seifert" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Doug Seifert Q&amp;amp;A with The Island News | Beaufort County Sheriff 2026" />
+<meta name="twitter:description" content="Read Doug Seifert" />
+<!-- End SEO Meta Tags -->
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=4400');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='6W9f6ZRbhZ';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="vote-banner" role="banner"><i class="fa-solid fa-vote-yea" aria-hidden="true" style="margin-right:.4rem;"></i> Republican Primary <span class="vote-banner-countdown" id="banner-countdown">June 9</span> <a href="https://www.seifertsheriff.com/#vote">Make a Plan to Vote &rarr;</a></div>
+<nav aria-label="Main navigation"><a href="https://www.seifertsheriff.com" class="nav-logo">Seifert for Sheriff</a><ul class="nav-links"><li><a href="https://www.seifertsheriff.com/#about">About</a></li><li><a href="https://www.seifertsheriff.com/#plan">The Plan</a></li><li><a href="/island-news-qa/" class="active">Q&amp;A</a></li><li><a href="https://www.seifertsheriff.com/#events">Events</a></li><li><a href="https://www.seifertsheriff.com/endorsements/">Endorsements</a></li><li><a href="https://www.seifertsheriff.com/#donate">Donate</a></li><li><a href="https://www.seifertsheriff.com/#vote" class="nav-vote-btn">Vote June 9</a></li></ul><button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button></nav>
+<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true"><a href="https://www.seifertsheriff.com/#about">About</a><a href="https://www.seifertsheriff.com/#plan">The Plan</a><a href="/island-news-qa/" class="active">Q&amp;A</a><a href="https://www.seifertsheriff.com/#events">Events</a><a href="https://www.seifertsheriff.com/endorsements/">Endorsements</a><a href="https://www.seifertsheriff.com/#donate">Donate</a><a href="https://www.seifertsheriff.com/#vote" class="mob-vote-btn">Vote June 9</a></div>
+
+<main id="main-content">
+
+<section class="qa-hero" aria-label="Q&A introduction">
+<img class="qa-hero-img" src="https://paymegpt.com/objects/generated-images/2/1779969863947-9654c834a3cabd55.png" alt="Beaufort County Lowcountry coastal road at golden hour with American and South Carolina flags" loading="eager" fetchpriority="high">
+<div class="qa-hero-inner">
+<div class="qa-hero-badge">In His Own Words &middot; The Island News Q&amp;A</div>
+<h1>Doug Seifert<span>On The Issues</span></h1>
+<div class="qa-hero-sub">Beaufort County Sheriff &middot; Republican Primary June 9, 2026</div>
+<p>The Island News sat down with Doug Seifert and asked the hard questions facing Beaufort County. Here are his complete, unedited answers, on public safety, gang activity, traffic, transparency, recruitment, and the leadership our county needs.</p>
+</div>
+</section>
+
+<section class="qa-intro">
+<div class="qa-intro-inner">
+<div class="section-label">Why This Matters</div>
+<p>Voters deserve real answers, not soundbites. Below are Doug&rsquo;s full responses to <strong>The Island News</strong> on the issues that affect every family in Beaufort County. Tap any question to read his complete answer.</p>
+<p style="font-size:.82rem;color:rgba(245,240,232,.45);margin-top:1.2rem;font-weight:300;">Responses as submitted to The Island News candidate questionnaire. <a href="https://yourislandnews.com/primary-2026-doug-seifert-jojo-woodward-republican-candidates-for-beaufort-county-sheriff/" target="_blank" rel="noopener noreferrer" style="color:rgba(201,168,76,.7);text-decoration:none;border-bottom:1px solid rgba(201,168,76,.3);">View the original article &rarr;</a></p>
+</div>
+</section>
+
+<section class="qa-section">
+<div class="qa-section-inner">
+<div class="fade-up">
+<div class="section-label">The Full Q&amp;A</div>
+<h2 class="section-title">Doug Seifert Answers The Island News</h2>
+<div class="divider"></div>
+</div>
+
+<div class="qa-controls fade-up">
+<button class="qa-expand-btn" id="expand-all" aria-label="Expand all questions">Expand All &plus;</button>
+</div>
+
+<div class="issues-list fade-up">
+
+<div class="issue open" id="q1">
+<button class="issue-trigger" aria-expanded="true"><span class="issue-number">01</span><span class="issue-title-wrap"><span class="issue-title">What do you believe is the single biggest public safety issue currently facing Beaufort County?</span><span class="issue-hint">Tap to Collapse</span></span><span class="issue-toggle" aria-hidden="true"><span class="bar bar-h"></span><span class="bar bar-v"></span></span></button>
+<div class="issue-body"><div class="issue-content">
+<p class="issue-lead">The lack of infrastructure is creating the biggest public safety issue in Beaufort County.</p>
+<p>This issue results in significant traffic congestion, leading to more traffic accidents, traffic fatalities, and aggressive driving behavior. In 2025 alone, the Beaufort County Sheriff&rsquo;s Office wrote over <strong>8,000 warning tickets</strong>, <strong>6,500 citations</strong>, investigated over <strong>1,100 traffic accidents</strong>, all while responding to <strong>140,000 calls for service</strong>.</p>
+<p>If elected Sheriff, I plan to dedicate Road Deputies solely to enforcing traffic laws and responding to roadway incidents. By creating a stronger traffic enforcement division, we can more efficiently handle congestion and minor accidents while allowing other deputies to remain focused on proactive law enforcement, crime prevention, and rapid response to serious incidents throughout Beaufort County.</p>
+<p>Additionally, I will continue encouraging municipal, county, and state leaders to temporarily slow growth and allow us to build the infrastructure needed to support our current and growing population.</p>
+</div></div>
+</div>
+
+<div class="issue" id="q2">
+<button class="issue-trigger" aria-expanded="false"><span class="issue-number">02</span><span class="issue-title-wrap"><span class="issue-title">Sheriff Tanner warned about increasing gang activity and illegally modified firearms. Do you agree, and what strategies would you implement to address violent crime and gang activity?</span><span class="issue-hint">Tap to Expand</span></span><span class="issue-toggle" aria-hidden="true"><span class="bar bar-h"></span><span class="bar bar-v"></span></span></button>
+<div class="issue-body"><div class="issue-content">
+<p class="issue-lead">Yes, I agree with Sheriff Tanner that our County is dealing with increased gang activity and an increased use of illegally modified firearms.</p>
+<p>These issues require a multifaceted approach from the Beaufort County Sheriff&rsquo;s Office.</p>
+<div class="plan-label">Doug&rsquo;s five-part approach:</div>
+<ol class="steps">
+<li><strong>Partnerships.</strong> The Sheriff&rsquo;s Office must continue to partner with local, state, and federal agencies to ensure all available resources are being used appropriately. I also plan to support local leaders like Solicitor Duffie Stone, who has consistently advocated for a RICO law that would enhance law enforcement&rsquo;s ability to investigate and charge, while giving South Carolina prosecutors the ability to effectively prosecute gangs and keep criminals off the street.</li>
+<li><strong>Alternatives for our youth.</strong> We must provide alternative means of engagement to combat the attraction of gang activity and illegally modified firearms. I would work with County Council to continue investing in parks, athletic facilities, community centers, after-school programs, mentorship opportunities, and safe recreational spaces, especially during evening hours when crime and gang recruitment are more likely to occur. That must change.</li>
+<li><strong>Community engagement.</strong> My community engagement team, made up of department personnel, will ensure the Sheriff&rsquo;s Office is consistently involved in community events and outreach, including the Junior Deputy Academy. I want to expand opportunities for youth to interact with deputies and our K9 teams through school visits, demonstrations, and community events, building trust with the next generation.</li>
+<li><strong>Boots on the ground.</strong> Good old fashioned hard work. I plan to work with County Council to increase salaries that attract and retain exceptional deputies, grow law enforcement presence throughout our community, and expand the current Violent Crime Task Force that targets both violent crime and drugs.</li>
+<li><strong>Swift prosecution.</strong> When someone is arrested and charged, we need swift and robust prosecution. I plan to work with the Solicitor&rsquo;s Office and our federal partners within the Department of Justice to identify individuals who can be fully prosecuted at the state or federal level.</li>
+</ol>
+</div></div>
+</div>
+
+<div class="issue" id="q3">
+<button class="issue-trigger" aria-expanded="false"><span class="issue-number">03</span><span class="issue-title-wrap"><span class="issue-title">Looking back at the St. Helena Island investigation, is there anything law enforcement or county leadership could have handled differently?</span><span class="issue-hint">Tap to Expand</span></span><span class="issue-toggle" aria-hidden="true"><span class="bar bar-h"></span><span class="bar bar-v"></span></span></button>
+<div class="issue-body"><div class="issue-content">
+<p class="issue-lead">I believe we must all share the responsibility.</p>
+<p>The County of Beaufort could be more responsive in the enforcement of County Ordinances in potential nuisance locations. All citizens have the responsibility to report any concerns or grievances to law enforcement and to their local leaders. The use of the Beaufort County Sheriff&rsquo;s Office Crime Stoppers tip line is critical for those who want to report information anonymously.</p>
+<p>The Beaufort County Sheriff&rsquo;s Office must work in concert with our prosecutors at the Solicitor&rsquo;s Office and the federal government in identifying bad actors, and we must ensure that those identified individuals receive robust and timely prosecution.</p>
+</div></div>
+</div>
+
+<div class="issue" id="q4">
+<button class="issue-trigger" aria-expanded="false"><span class="issue-number">04</span><span class="issue-title-wrap"><span class="issue-title">How would you approach public transparency during a major investigation while still protecting the integrity of the case?</span><span class="issue-hint">Tap to Expand</span></span><span class="issue-toggle" aria-hidden="true"><span class="bar bar-h"></span><span class="bar bar-v"></span></span></button>
+<div class="issue-body"><div class="issue-content">
+<p class="issue-lead">Not all information regarding an active investigation can immediately be shared with the public.</p>
+<p>Prematurely releasing certain details can jeopardize investigations, impact victims and witnesses, and ultimately affect the successful prosecution of offenders. However, I plan to continue the use of <strong>Nixle</strong>, which allows for a text-based notification either countywide or targeted to a particular geographical area, to immediately inform the public of any ongoing or imminent danger.</p>
+<p>Following the release of that notification, I would hold press conferences to keep the public informed of the ongoing actions of the Sheriff&rsquo;s Office. Though information may at times be limited, it is extremely important to reassure the public that the Sheriff&rsquo;s Office is working diligently, professionally, and compassionately to resolve whatever situation has occurred.</p>
+<p>I also plan to utilize the Sheriff&rsquo;s Office victim advocates to ensure that those directly impacted by an incident receive the care, support, and communication they deserve throughout the process.</p>
+</div></div>
+</div>
+
+<div class="issue" id="q5">
+<button class="issue-trigger" aria-expanded="false"><span class="issue-number">05</span><span class="issue-title-wrap"><span class="issue-title">What specific steps would you take to improve staffing, morale, and retention within the Sheriff&rsquo;s Office?</span><span class="issue-hint">Tap to Expand</span></span><span class="issue-toggle" aria-hidden="true"><span class="bar bar-h"></span><span class="bar bar-v"></span></span></button>
+<div class="issue-body"><div class="issue-content">
+<p class="issue-lead">Recruitment and retention begins with making sure our personnel feel valued, supported, and properly equipped to do their jobs safely and effectively.</p>
+<p>To improve recruitment and retention, we must continue working with County Council to provide competitive wages that allow us to attract and keep high-quality deputies here in Beaufort County. We must also couple competitive pay with continued advancements in technology, training, and equipment so our deputies can work smarter, safer, and more efficiently.</p>
+<p>After more than two decades in law enforcement, I understand that morale is not built by words alone. It is built by <strong>leadership that listens</strong>, provides support, and gives deputies the resources they need to succeed both professionally and personally.</p>
+</div></div>
+</div>
+
+<div class="issue" id="q6">
+<button class="issue-trigger" aria-expanded="false"><span class="issue-number">06</span><span class="issue-title-wrap"><span class="issue-title">What standards and expectations should apply to deputies when they are not actively on duty?</span><span class="issue-hint">Tap to Expand</span></span><span class="issue-toggle" aria-hidden="true"><span class="bar bar-h"></span><span class="bar bar-v"></span></span></button>
+<div class="issue-body"><div class="issue-content">
+<p class="issue-lead">The public&rsquo;s trust in law enforcement does not end when a shift is over.</p>
+<p>The Beaufort County Sheriff&rsquo;s Office is a policy-driven and nationally accredited law enforcement agency through the Commission on Accreditation for Law Enforcement Agencies (CALEA), with oversight through the Office of Professional Responsibility. Deputies are expected to uphold the law and conduct themselves professionally both on and off duty.</p>
+<p>Any actions by a Deputy Sheriff, whether on duty or off duty, are subject to the policies and standards of the Sheriff&rsquo;s Office, and all potential policy violations are thoroughly reviewed by the Office of Professional Responsibility (Internal Affairs). If any matter rises to the level of potential criminal conduct, the South Carolina Law Enforcement Division (SLED) is immediately requested to conduct an independent investigation to ensure transparency, accountability, and public confidence.</p>
+<p>I fully support that process because our community deserves to know that these matters are handled professionally, fairly, and without any appearance of a conflict of interest.</p>
+</div></div>
+</div>
+
+<div class="issue" id="q7">
+<button class="issue-trigger" aria-expanded="false"><span class="issue-number">07</span><span class="issue-title-wrap"><span class="issue-title">How would your administration balance transparency and accountability with protecting ongoing investigations and pending court proceedings?</span><span class="issue-hint">Tap to Expand</span></span><span class="issue-toggle" aria-hidden="true"><span class="bar bar-h"></span><span class="bar bar-v"></span></span></button>
+<div class="issue-body"><div class="issue-content">
+<p class="issue-lead">When a serious incident becomes public, people want answers immediately, and it can be frustrating when all the details cannot yet be released.</p>
+<p>However, the Beaufort County Sheriff&rsquo;s Office is legally and ethically required to protect the integrity of any criminal investigation and future court proceeding. Releasing information too early or inaccurately can jeopardize investigations, impact witnesses and victims, and ultimately affect the outcome of a case.</p>
+<p>With that being said, I believe timely communication through <strong>Nixle notifications, press conferences, and social media</strong> is critical to maintaining public trust. Even when all details cannot yet be shared, the Sheriff&rsquo;s Office should acknowledge when an incident has occurred, communicate what can responsibly be released, and reassure the public that the matter is being handled professionally, thoroughly, and transparently.</p>
+</div></div>
+</div>
+
+<div class="issue" id="q8">
+<button class="issue-trigger" aria-expanded="false"><span class="issue-number">08</span><span class="issue-title-wrap"><span class="issue-title">The Sheriff&rsquo;s Office recently rejoined ICE&rsquo;s 287(g) program. Do you support the program? Why or why not?</span><span class="issue-hint">Tap to Expand</span></span><span class="issue-toggle" aria-hidden="true"><span class="bar bar-h"></span><span class="bar bar-v"></span></span></button>
+<div class="issue-body"><div class="issue-content">
+<p class="issue-lead">I support the 287(g) program and believe partnerships between local, state, and federal law enforcement can play an important role in keeping our community safe.</p>
+<p>At the same time, I believe every agreement entered into by the Beaufort County Sheriff&rsquo;s Office should be carefully reviewed to ensure it is serving the best interests of Beaufort County and being carried out appropriately, professionally, and responsibly. As Sheriff, I will do my due diligence in reviewing all contracts and partnerships to ensure we are working with the right agencies for the right reasons and in a manner that reflects the values of our community.</p>
+<p>I also understand the importance of maintaining strong communication and cooperation with our federal partners. Programs such as 287(g) can provide valuable information-sharing opportunities and help law enforcement identify and apprehend undocumented individuals with serious criminal histories who pose a threat to public safety.</p>
+</div></div>
+</div>
+
+<div class="issue" id="q9">
+<button class="issue-trigger" aria-expanded="false"><span class="issue-number">09</span><span class="issue-title-wrap"><span class="issue-title">How would your administration approach transparency and accountability in incidents involving deputies that become highly publicized or controversial?</span><span class="issue-hint">Tap to Expand</span></span><span class="issue-toggle" aria-hidden="true"><span class="bar bar-h"></span><span class="bar bar-v"></span></span></button>
+<div class="issue-body"><div class="issue-content">
+<p class="issue-lead">When incidents involving law enforcement become highly publicized or controversial, the public wants answers quickly and expects transparency from their Sheriff&rsquo;s Office.</p>
+<p>At the same time, the Beaufort County Sheriff&rsquo;s Office is legally and ethically required to protect the integrity of any criminal investigation and future court proceeding. With that being said, I believe the immediate disclosure of information that can responsibly be shared through Nixle notifications, press conferences, social media, and direct community engagement is critical to maintaining public trust.</p>
+<p>Throughout this campaign, I have made myself available to the public because I believe leadership requires <strong>visibility, accessibility, and honest communication</strong>, especially during difficult situations. As Sheriff, I will continue that approach by acknowledging incidents early, communicating what can be shared responsibly, and ensuring the public knows these matters are being handled professionally, fairly, and thoroughly.</p>
+</div></div>
+</div>
+
+<div class="issue" id="q10">
+<button class="issue-trigger" aria-expanded="false"><span class="issue-number">10</span><span class="issue-title-wrap"><span class="issue-title">What distinguishes you from your opponent, and why are you the best candidate to lead the Beaufort County Sheriff&rsquo;s Office?</span><span class="issue-hint">Tap to Expand</span></span><span class="issue-toggle" aria-hidden="true"><span class="bar bar-h"></span><span class="bar bar-v"></span></span></button>
+<div class="issue-body"><div class="issue-content">
+<p class="issue-lead">I have spent the last twenty years actively serving the people of Beaufort County as a Deputy Sheriff.</p>
+<p>Working in this community, raising my family here, and building relationships at every level of law enforcement and public service. In fact, if state law did not require me to step away from my position while running for Sheriff, I would still proudly be serving alongside the men and women of the Beaufort County Sheriff&rsquo;s Office today.</p>
+<p>Over the past eight years, while my opponent has been away from the day-to-day operations of this agency, the Sheriff&rsquo;s Office has continued evolving through advancements in technology, training, science, accreditation, and modern law enforcement practices. Because I have remained actively involved in this profession and this community, I understand both where this agency has grown and where we must continue improving to meet the needs of our rapidly growing county.</p>
+<p>I am not interested in tearing down this agency or the dedicated deputies who serve our community every day. I support them, I respect them, and I want to provide them with the leadership, training, equipment, and support they need to succeed. <strong>I believe leadership is about showing up, listening, and being accessible to the people you serve.</strong></p>
+<p>My goal is to continue moving the Beaufort County Sheriff&rsquo;s Office forward by strengthening public trust, supporting our deputies, building strong partnerships at the local, state, and federal level, and ensuring Beaufort County remains a safe place to live, work, and raise a family.</p>
+<p>I encourage anyone who would like to learn more, ask questions, or speak with me directly to visit SeifertForSheriff.com or email me directly at seifertforsheriff@gmail.com. I welcome the opportunity to earn your trust and have an honest conversation about the future of Beaufort County.</p>
+</div></div>
+</div>
+
+</div>
+</div>
+</section>
+
+<div class="quote-section"><div class="quote-inner fade-up"><blockquote>I believe leadership is about showing up, listening, and being accessible to the people you serve.</blockquote><cite>&mdash; Doug Seifert, Candidate for Beaufort County Sheriff</cite></div></div>
+
+<section class="qa-cta">
+<div class="qa-cta-inner fade-up">
+<div class="section-label">Have a Question for Doug?</div>
+<h2 class="section-title">Let&rsquo;s Have an Honest Conversation</h2>
+<div class="divider"></div>
+<p>Doug welcomes the opportunity to earn your trust and talk directly about the future of Beaufort County. Reach out, get involved, or make your plan to vote in the <strong>Republican Primary on June 9, 2026</strong>.</p>
+<div class="qa-cta-btns">
+<a href="https://www.seifertsheriff.com/#connect" class="btn-gold">Contact the Campaign</a>
+<a href="https://www.seifertsheriff.com/#vote" class="btn-red">Make a Plan to Vote</a>
+<a href="https://www.seifertsheriff.com/" class="btn-outline">Back to Home</a>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer role="contentinfo"><p><a href="https://www.seifertsheriff.com">&larr; Return to Home</a><br><br><em>PAID BY THE COMMITTEE TO ELECT SEIFERT SHERIFF</em><br><br>Responses originally submitted to <a href="https://yourislandnews.com/primary-2026-doug-seifert-jojo-woodward-republican-candidates-for-beaufort-county-sheriff/" target="_blank" rel="noopener noreferrer">The Island News</a> candidate questionnaire (Delayna Earley, May 27, 2026).<br>&copy; 2026 All rights reserved.</p></footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

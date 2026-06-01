@@ -1,6 +1,6 @@
 // Measure the real banner height so the fixed nav sits exactly below it
-// (fixes notch/safe-area devices where the banner renders taller than a hard-coded value)
-function setBannerH(){var b=document.querySelector('.vote-banner');if(b){document.documentElement.style.setProperty('--banner-h',Math.ceil(b.getBoundingClientRect().height)+'px');}}
+// (floor avoids a sub-pixel gap; nav tucks under the banner instead of leaving a seam)
+function setBannerH(){var b=document.querySelector('.vote-banner');if(b){document.documentElement.style.setProperty('--banner-h',Math.floor(b.getBoundingClientRect().height)+'px');}}
 setBannerH();
 window.addEventListener('resize',setBannerH);
 window.addEventListener('orientationchange',function(){setTimeout(setBannerH,250);});

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Doug Seifert for Sheriff Campaign">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://www.seifertsheriff.com/faq/">
+<meta name="theme-color" content="#0d0d0d">
+<meta property="og:url" content="https://www.seifertsheriff.com/faq/">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<!-- SEO Meta Tags -->
+
+
+
+
+
+
+
+
+
+<!-- End SEO Meta Tags -->
+
+
+
+<!-- SEO Meta Tags -->
+<title>FAQ | Doug Seifert for Beaufort County Sheriff 2026</title>
+<meta name="description" content="Doug Seifert answers the tough questions directly and on the record, from his record and experience to public safety, traffic, ICE, youth engagement, and his plan for Beaufort County. Vote June 9." />
+<meta property="og:title" content="FAQ | Doug Seifert for Beaufort County Sheriff 2026" />
+<meta property="og:description" content="Doug Seifert answers the tough questions directly and on the record, from his record and experience to public safety, traffic, ICE, youth engagement, and his plan for Beaufort County. Vote June 9." />
+<meta property="og:image" content="https://paymegpt.com/objects/quick-uploads/2/26b9b246ebf2c763.jpg" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="FAQ | Doug Seifert for Beaufort County Sheriff 2026" />
+<meta name="twitter:description" content="Doug Seifert answers the tough questions directly and on the record, from his record and experience to public safety, traffic, ICE, youth engagement, and his plan for Beaufort County. Vote June 9." />
+<meta name="twitter:image" content="https://paymegpt.com/objects/quick-uploads/2/26b9b246ebf2c763.jpg" />
+<!-- End SEO Meta Tags -->
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=4485');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='4ycb5C';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="vote-banner" role="banner"><i class="fa-solid fa-vote-yea" aria-hidden="true" style="margin-right:.4rem;"></i> Republican Primary <span class="vote-banner-countdown" id="banner-countdown">June 9</span> <a href="https://www.seifertsheriff.com/#vote">Make a Plan to Vote &rarr;</a></div>
+<nav aria-label="Main navigation"><a href="https://www.seifertsheriff.com" class="nav-logo">Seifert for Sheriff</a><ul class="nav-links"><li><a href="https://www.seifertsheriff.com/#about">About</a></li><li><a href="https://www.seifertsheriff.com/#plan">The Plan</a></li><li><a href="#" class="active">FAQ</a></li><li><a href="https://www.seifertsheriff.com/endorsements/">Endorsements</a></li><li><a href="https://www.seifertsheriff.com/#donate">Donate</a></li><li><a href="https://www.seifertsheriff.com/#connect">Connect</a></li><li><a href="https://www.seifertsheriff.com/#vote" class="nav-vote-btn">Vote June 9</a></li></ul><button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button></nav>
+<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true"><a href="https://www.seifertsheriff.com/#about">About</a><a href="https://www.seifertsheriff.com/#plan">The Plan</a><a href="#">FAQ</a><a href="https://www.seifertsheriff.com/endorsements/">Endorsements</a><a href="https://www.seifertsheriff.com/#donate">Donate</a><a href="https://www.seifertsheriff.com/#connect">Connect</a><a href="https://www.seifertsheriff.com/#vote" class="mob-vote-btn">Vote June 9</a></div>
+
+<main id="main-content">
+
+<header class="page-hero">
+<div class="page-hero-inner">
+<span class="palm"><i class="fa-solid fa-tree-palm" aria-hidden="true"></i></span>
+<div class="page-hero-badge">Republican Primary &middot; June 9, 2026</div>
+<h1>Answering the<span>Tough Questions</span></h1>
+<div class="page-hero-sub">Doug Seifert, In His Own Words</div>
+<p>A member of our community recently sent a series of direct, and at times pointed, questions. Doug believes the people of Beaufort County deserve complete answers. Here they are, on the record, in his own words.</p>
+<div class="divider"></div>
+</div>
+</header>
+
+<div class="count-bar">
+<div class="count-item"><div class="count-num">10</div><div class="count-label">Questions Answered</div></div>
+<div class="count-item"><div class="count-num">20</div><div class="count-label">Years Serving BCSO</div></div>
+<div class="count-item"><div class="count-num">204K+</div><div class="count-label">Residents Served</div></div>
+<div class="count-item"><div class="count-num" id="count-days">--</div><div class="count-label">Days Until Primary</div></div>
+</div>
+
+<section class="note-section">
+<div class="section-inner">
+<div class="note-header fade-up">
+<div class="section-label">A Note From Doug</div>
+<h2 class="section-title">Bring On the Tough Questions</h2>
+<div class="divider"></div>
+</div>
+<div class="doug-note fade-up">
+<p class="lead-line">Some questions come from information shared online, often without full context. I do not fault anyone for asking the hard ones. In fact, I welcome them.</p>
+<p>The people of Beaufort County deserve complete answers, and I believe candidates for Sheriff should be willing to provide them.</p>
+<p>Before the specific questions, I want to address a concern I hear often: that much of my career has been spent South of the Broad. While many of my assignments were based south of the Broad River, I have never viewed Beaufort County through a geographic lens. As a deputy, investigator, supervisor, and K-9 handler, I worked throughout the county. Criminals do not recognize district boundaries, municipal lines, or the Broad River. Neither should the Sheriff.</p>
+<p>If elected, every community, from Shell Point to Sheldon, St. Helena to Bluffton, Burton to Hilton Head, will receive the same level of attention, resources, and commitment. The people of Northern Beaufort County deserve a Sheriff who shows up year-round, not just during election season or a crisis.</p>
+</div>
+</div>
+</section>
+
+<section class="qa-section">
+<div class="section-inner">
+<div class="qa-header fade-up">
+<div class="section-label">On the Record</div>
+<h2 class="section-title">The Questions</h2>
+<div class="divider"></div>
+<p>Tap any question below to read Doug's full answer.</p>
+</div>
+
+<div class="issues-list">
+
+<div class="issue fade-up">
+<button class="issue-trigger" aria-expanded="false">
+<span class="issue-number">01</span>
+<span class="issue-title-wrap"><span class="issue-title">There have been questions online about the William Squires incident. Were you involved?</span><span class="issue-hint">Tap to read</span></span>
+<span class="issue-toggle"><span class="bar bar-h"></span><span class="bar bar-v"></span></span>
+</button>
+<div class="issue-body"><div class="issue-content">
+<p class="issue-lead">It was a beyond tragic incident that affected multiple families, and when people do not have all the facts, it is natural to have questions.</p>
+<p>As I have stated previously, my wife received a call and I immediately left our home to render aid. I contacted the Shift Supervisor and remained on scene. I provided witness statements to both the Internal Affairs investigator and the South Carolina Law Enforcement Division (SLED).</p>
+<p>Because I am anticipated to be a witness in both the criminal proceedings and pending civil litigation, I am legally and ethically obligated not to discuss details that could compromise those cases. I am not the subject of any disciplinary action by the Beaufort County Sheriff's Office. I am not the subject of a criminal investigation by SLED. I am not named in any of the pending civil lawsuits.</p>
+<p>If I had violated policy, acted improperly, or committed a crime, there would have been disciplinary action, criminal charges, or civil liability. None of those things occurred.</p>
+<p class="closing">My focus remains where it belongs: protecting the integrity of the judicial process and respecting the victims involved.</p>
+</div></div>
+</div>
+
+<div class="issue fade-up">
+<button class="issue-trigger" aria-expanded="false">
+<span class="issue-number">02</span>
+<span class="issue-title-wrap"><span class="issue-title">Were you a Lieutenant for only 10 days? Did you only work in Hilton Head?</span><span class="issue-hint">Tap to read</span></span>
+<span class="issue-toggle"><span class="bar bar-h"></span><span class="bar bar-v"></span></span>
+</button>
+<div class="issue-body"><div class="issue-content">
+<p>Yes, I held the rank of Lieutenant for 10 days before resigning to run for Sheriff. What most people do not know is that Lieutenant Bob DiCarlo retired, creating a vacancy. I applied for that promotion before I knew Sheriff Tanner would retire and before I decided to run for Sheriff.</p>
+<p>What often gets left out is that I spent well over a decade serving in supervisory positions within the Beaufort County Sheriff's Office before that promotion. I do not believe the quality of leadership is defined by a title. It is defined by years of experience managing people, making decisions, solving problems, and being accountable for outcomes.</p>
+<p class="closing">While many of my assignments were headquartered in Hilton Head, my work has never been limited to one area. Throughout my career I have worked road patrol, investigations, special operations, county-wide initiatives, and major incidents across Beaufort County, a county of more than 204,000 people.</p>
+</div></div>
+</div>
+
+<div class="issue fade-up">
+<button class="issue-trigger" aria-expanded="false">
+<span class="issue-number">03</span>
+<span class="issue-title-wrap"><span class="issue-title">What qualifies you to run every part of the Sheriff's Office?</span><span class="issue-hint">Tap to read</span></span>
+<span class="issue-toggle"><span class="bar bar-h"></span><span class="bar bar-v"></span></span>
+</button>
+<div class="issue-body"><div class="issue-content">
+<p>Unlike my opponent, I have spent the last twenty years actively serving within the Beaufort County Sheriff's Office. I know that residents of each area have different concerns and priorities. The priorities North of the Broad River are not the same as the South, and that is important to recognize.</p>
+<p>Your Sheriff's Office has changed dramatically over the last five years, let alone eight or ten. Technology, staffing, investigative methods, training standards, community expectations, and public safety concerns have all evolved. We are not the same Sheriff's Office that existed years ago.</p>
+<p>Because I currently serve within BCSO, I know the people, the challenges, the strengths, and the opportunities for improvement. I will not spend my first year relearning the organization. I can begin making improvements on day one while keeping our department intact.</p>
+<p class="closing">Effective Sheriffs do not personally perform every assignment within every unit. Their job is to build strong teams, develop strong leaders, establish clear priorities, and ensure every division has the resources necessary to succeed.</p>
+</div></div>
+</div>
+
+<div class="issue fade-up">
+<button class="issue-trigger" aria-expanded="false">
+<span class="issue-number">04</span>
+<span class="issue-title-wrap"><span class="issue-title">Do you really know what happens in Northern Beaufort County?</span><span class="issue-hint">Tap to read</span></span>
+<span class="issue-toggle"><span class="bar bar-h"></span><span class="bar bar-v"></span></span>
+</button>
+<div class="issue-body"><div class="issue-content">
+<p class="issue-lead">Yes.</p>
+<p>I have dedicated more than twenty years to serving Beaufort County. During that time I have worked throughout the county and have firsthand knowledge of the challenges facing Northern Beaufort County, including violent crime, gang activity, narcotics trafficking, traffic concerns, juvenile crime, and quality-of-life issues.</p>
+<p class="closing">The people living in Northern Beaufort County deserve to know their Sheriff understands those challenges and is committed to addressing them. I do.</p>
+</div></div>
+</div>
+
+<div class="issue fade-up">
+<button class="issue-trigger" aria-expanded="false">
+<span class="issue-number">05</span>
+<span class="issue-title-wrap"><span class="issue-title">Why do you say Beaufort County is safe when it does not feel safe anymore?</span><span class="issue-hint">Tap to read</span></span>
+<span class="issue-toggle"><span class="bar bar-h"></span><span class="bar bar-v"></span></span>
+</button>
+<div class="issue-body"><div class="issue-content">
+<p>There is an important distinction between crime statistics and how people actually feel in their communities. When I say Beaufort County is a safe place to live, I am referring to crime data that consistently shows our county performs better than many counties across South Carolina. Those real numbers matter, but it also matters whether a resident feels safe at home, at work, at school, and everywhere else.</p>
+<p>Statistics alone do not determine whether someone feels safe walking into a store, driving through their neighborhood, or letting their children play outside. If residents are telling us they feel less safe than they did ten years ago, law enforcement should listen. I do not dismiss those concerns. In fact, they are one of the reasons I am running for Sheriff.</p>
+<p>Regarding Sheriff Tanner's comments following the St. Helena shooting, his statement was made while suspects remained at large after a mass shooting. Under those circumstances, it would have been irresponsible to suggest there was no ongoing threat. I believe his comments have often been taken out of context.</p>
+<p class="closing">Can Beaufort County be safer? Absolutely. That is why I am focused on improving recruitment and retention, increasing proactive enforcement, expanding youth engagement, strengthening partnerships with local, state, and federal agencies, and building stronger connections between deputies and the communities they serve.</p>
+</div></div>
+</div>
+
+<div class="issue fade-up">
+<button class="issue-trigger" aria-expanded="false">
+<span class="issue-number">06</span>
+<span class="issue-title-wrap"><span class="issue-title">What about Walmart, neighborhood crime, speeding, juvenile crime, and quality-of-life concerns?</span><span class="issue-hint">Tap to read</span></span>
+<span class="issue-toggle"><span class="bar bar-h"></span><span class="bar bar-v"></span></span>
+</button>
+<div class="issue-body"><div class="issue-content">
+<p>Whether a call falls under the Sheriff's Office, Beaufort Police Department, Port Royal Police Department, or another agency does not change the fact that citizens notice what is happening around them. When residents tell me they are concerned about speeding, reckless driving, youth crime, break-ins, or repeat offenders, I take those concerns seriously.</p>
+<p>One of my goals as Sheriff is to increase visible law enforcement presence in communities and improve communication between deputies and residents. People should know who their deputies are and feel comfortable bringing concerns directly to them.</p>
+<p class="closing">Accountability, enforcement, and community engagement must work together if we want to improve quality of life throughout the county.</p>
+</div></div>
+</div>
+
+<div class="issue fade-up">
+<button class="issue-trigger" aria-expanded="false">
+<span class="issue-number">07</span>
+<span class="issue-title-wrap"><span class="issue-title">Do you support a working relationship with ICE?</span><span class="issue-hint">Tap to read</span></span>
+<span class="issue-toggle"><span class="bar bar-h"></span><span class="bar bar-v"></span></span>
+</button>
+<div class="issue-body"><div class="issue-content">
+<p class="issue-lead">Yes.</p>
+<p>I support participation in the 287(g) program and intend to enter into a new agreement once elected Sheriff.</p>
+<p class="closing">I believe strong partnerships with federal, state, and local agencies improve public safety. Criminal activity does not stop at jurisdictional boundaries, and law enforcement agencies must work together when appropriate to protect our communities.</p>
+</div></div>
+</div>
+
+<div class="issue fade-up">
+<button class="issue-trigger" aria-expanded="false">
+<span class="issue-number">08</span>
+<span class="issue-title-wrap"><span class="issue-title">How will you improve crime overall, especially in Northern Beaufort County?</span><span class="issue-hint">Tap to read</span></span>
+<span class="issue-toggle"><span class="bar bar-h"></span><span class="bar bar-v"></span></span>
+</button>
+<div class="issue-body"><div class="issue-content">
+<p class="issue-lead">My plan focuses on five priorities.</p>
+<div class="plan-label">The Five Priorities</div>
+<ul>
+<li>Strengthening partnerships with local, state, and federal law enforcement agencies.</li>
+<li>Supporting tougher prosecution of violent offenders and gang members.</li>
+<li>Expanding youth engagement programs and mentorship opportunities.</li>
+<li>Increasing recruitment and retention to put more deputies on the street.</li>
+<li>Expanding proactive enforcement efforts focused on violent crime and narcotics.</li>
+</ul>
+<p class="closing">I also support efforts to strengthen South Carolina's ability to prosecute organized criminal activity through enhanced racketeering statutes. Most importantly, prevention matters. We must provide young people with positive alternatives before gangs and criminal organizations become attractive options.</p>
+</div></div>
+</div>
+
+<div class="issue fade-up">
+<button class="issue-trigger" aria-expanded="false">
+<span class="issue-number">09</span>
+<span class="issue-title-wrap"><span class="issue-title">What about accidents and traffic problems?</span><span class="issue-hint">Tap to read</span></span>
+<span class="issue-toggle"><span class="bar bar-h"></span><span class="bar bar-v"></span></span>
+</button>
+<div class="issue-body"><div class="issue-content">
+<p>Traffic concerns are among the most common issues I hear from residents. Beaufort County has experienced tremendous growth, and our infrastructure has struggled to keep pace. While law enforcement alone cannot solve traffic congestion, we can improve traffic enforcement.</p>
+<div class="plan-label">In 2025, Beaufort County Deputies</div>
+<ul>
+<li>Issued more than 8,000 warnings.</li>
+<li>Issued more than 6,500 traffic citations.</li>
+<li>Investigated approximately 1,100 crashes.</li>
+<li>Responded to more than 140,000 calls for service.</li>
+</ul>
+<p class="closing">Those numbers demonstrate commitment, but there is room for improvement. As Sheriff, I plan to assign deputies whose primary responsibility is traffic enforcement, rather than requiring them to balance it with routine calls for service. More focused enforcement means greater visibility and safer roads.</p>
+</div></div>
+</div>
+
+<div class="issue fade-up">
+<button class="issue-trigger" aria-expanded="false">
+<span class="issue-number">10</span>
+<span class="issue-title-wrap"><span class="issue-title">How will you stay connected to the community and our youth?</span><span class="issue-hint">Tap to read</span></span>
+<span class="issue-toggle"><span class="bar bar-h"></span><span class="bar bar-v"></span></span>
+</button>
+<div class="issue-body"><div class="issue-content">
+<p>One of the most important responsibilities of a Sheriff is maintaining strong relationships with the community. I plan to establish a dedicated Community Engagement Team responsible for outreach, youth programs, community events, school partnerships, and public education initiatives.</p>
+<p>I also want to expand programs such as the Junior Deputy Academy and create additional opportunities for youth to interact with deputies, investigators, and K-9 teams through schools, demonstrations, mentorship programs, and community events.</p>
+<p class="closing">Too many young people are being influenced by gangs, drugs, violence, and social media. Law enforcement must be part of the solution by building positive relationships early and consistently.</p>
+</div></div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="closing-statement">
+<div class="closing-inner fade-up">
+<div class="section-label">In Closing</div>
+<div class="divider"></div>
+<p>Whether we agree on every issue or not, I appreciate everyone who takes the time to ask direct questions rather than rely on rumors, social media commentary, or campaign rhetoric.</p>
+<p>I do not believe Beaufort County is perfect. If I did, I would not be running for Sheriff. I am running because I believe we can do better. We can strengthen public safety, support our deputies, engage our youth, improve community trust, and ensure every corner of Beaufort County receives the attention it deserves.</p>
+<div class="closing-sig">Doug Seifert</div>
+<div class="closing-sig-role">Candidate for Beaufort County Sheriff</div>
+</div>
+</section>
+
+<section class="cta">
+<div class="cta-inner fade-up">
+<div class="section-label">Make Your Voice Count</div>
+<h2>Stand With <span>Doug Seifert</span></h2>
+<p>Have a question of your own, want to volunteer, or ready to make your plan to vote? Every message reaches the campaign directly. The Republican Primary is June 9.</p>
+<div class="cta-btns">
+<a href="https://www.seifertsheriff.com/#connect" class="btn-white">Ask a Question</a>
+<a href="https://www.seifertsheriff.com/#vote" class="btn-white-outline">Make a Plan to Vote</a>
+</div>
+</div>
+</section>
+
+</main>
+<footer role="contentinfo">
+<div class="section-inner"><p><em>PAID BY THE COMMITTEE TO ELECT SEIFERT SHERIFF</em><br><br>&copy; 2026 All rights reserved. &middot; <a href="https://www.seifertsheriff.com">Return to Home</a></p></div>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

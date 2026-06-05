@@ -1,0 +1,13 @@
+/* ===== BRAND TYPOGRAPHY & BASE STYLES ===== */
+    :root{--bg:#0d0d0d;--bg2:#050505;--gold:#c9a84c;--gold2:#e8c96a;--cream:#f5f0e8;--red:#b8222a}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--cream);font-family:"Source Serif 4",serif}
+    .font-display{font-family:"Playfair Display",serif}
+    .font-nav,.font-bebas{font-family:"Bebas Neue",sans-serif;letter-spacing:.12em}
+    .border-gold{border-color:rgba(201,168,76,.18)}
+    .gold-text{color:var(--gold2)}
+    .gold-btn{background:var(--gold);color:#111}
+    .gold-btn:hover{background:var(--gold2)}
+    .gold-outline{border:1px solid rgba(201,168,76,.55);color:var(--cream)}
+    .gold-outline:hover{border-color:var(--gold2);color:var(--gold2)}
+    .section-band{background:var(--bg2)}
